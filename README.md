@@ -5,3 +5,6 @@
 3.Kedar Pramod Pathak <br/>
 4.Saurabh Solanki <br/>
 5.Rutuja Lomate. <br/>
+ 
+
+ This website is the clon of shop.com
