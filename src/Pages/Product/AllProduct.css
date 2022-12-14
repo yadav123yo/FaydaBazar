@@ -1,0 +1,16 @@
+.so1 button{
+    gap: 10px;
+    border: 1px solid red;
+}
+
+#productList{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+#productButton{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
