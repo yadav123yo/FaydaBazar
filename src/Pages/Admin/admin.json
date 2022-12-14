@@ -1,0 +1,222 @@
+ [
+    {
+    "_id": "636bba870b6b2c405ac46bbf",
+    "stars": 4.5,
+    "imageUrl": "https://www.sephora.com/productimages/sku/s2030336-main-zoom.jpg?imwidth=270&imwidth=164",
+    "brand": "Moroccanoil",
+    "name": "Hydrating Shampoo",
+    "numReviews": 1600,
+    "price": 11,
+    "category": "hair",
+    "type": "shampoo"
+    },
+    {
+    "_id": "636bba870b6b2c405ac46bfc",
+    "stars": 5,
+    "imageUrl": "https://www.sephora.com/productimages/sku/s2445351-main-zoom.jpg?imwidth=270&pb=allure-best-2021-badge&imwidth=164",
+    "brand": "ghd",
+    "name": "Max Styler - 2 Wide Plate Flat Iron",
+    "numReviews": 175,
+    "price": 249,
+    "category": "tools",
+    "type": "hair"
+    },
+    {
+    "_id": "636bba870b6b2c405ac46ba2",
+    "stars": 4.5,
+    "imageUrl": "https://www.sephora.com/productimages/sku/s2348431-main-zoom.jpg?imwidth=270&pb=2020-03-sephora-clean-2019&imwidth=164",
+    "brand": "Glow Recipe",
+    "name": "Watermelon Glow PHA +BHA Pore-Tight Toner",
+    "numReviews": 2500,
+    "price": 15,
+    "category": "skincare",
+    "type": "treatments"
+    },
+    {
+    "_id": "636bba870b6b2c405ac46b86",
+    "imageUrl": "https://www.sephora.com/productimages/sku/s2352813-main-zoom.jpg?imwidth=270&imwidth=164",
+    "brand": "Fenty Beauty by Rihanna",
+    "name": "Cheeks Out Freestyle Cream Blush",
+    "stars": 4.5,
+    "numReviews": 1100,
+    "price": 22,
+    "category": "makeup",
+    "type": "cheek"
+    },
+    {
+    "_id": "636bba870b6b2c405ac46c18",
+    "stars": 4.5,
+    "imageUrl": "https://www.sephora.com/productimages/sku/s2124121-main-zoom.jpg?imwidth=270&imwidth=164",
+    "brand": "OUAI",
+    "name": "Scalp & Body Scrub",
+    "numReviews": 525,
+    "price": 38,
+    "category": "bath",
+    "type": "shower"
+    },
+    {
+    "_id": "636bba870b6b2c405ac46bbb",
+    "stars": 4,
+    "imageUrl": "https://www.sephora.com/productimages/sku/s2118867-main-zoom.jpg?imwidth=270&pb=2020-03-sephora-clean-2019&imwidth=164",
+    "brand": "Olaplex",
+    "name": "No. 4 Bond Maintenance™ Shampoo",
+    "numReviews": 1600,
+    "price": 10,
+    "category": "hair",
+    "type": "shampoo"
+    },
+    {
+    "_id": "636bba870b6b2c405ac46bc1",
+    "stars": 4,
+    "imageUrl": "https://www.sephora.com/productimages/sku/s2212116-main-zoom.jpg?imwidth=270&pb=2020-03-sephora-clean-2019&imwidth=164",
+    "brand": "Olaplex",
+    "name": "Mini No. 4 Bond Maintenance™ Shampoo",
+    "numReviews": 210,
+    "price": 14,
+    "category": "hair",
+    "type": "shampoo"
+    },
+    {
+    "_id": "636bba870b6b2c405ac46b62",
+    "imageUrl": "https://www.sephora.com/productimages/sku/s2116028-main-zoom.jpg?imwidth=270&imwidth=164",
+    "brand": "Charlotte Tilbury",
+    "name": "Hollywood Flawless Filter",
+    "stars": 4.5,
+    "numReviews": 1700,
+    "price": 15,
+    "category": "makeup",
+    "type": "face"
+    },
+    {
+    "_id": "636bba870b6b2c405ac46c0e",
+    "stars": 5,
+    "imageUrl": "https://www.sephora.com/productimages/sku/s1670876-main-zoom.jpg?imwidth=270&pb=2020-03-sephora-value-2020&imwidth=164",
+    "brand": "SEPHORA COLLECTION",
+    "name": "Breakups To Makeup Bag",
+    "numReviews": 56,
+    "price": 24,
+    "category": "tools",
+    "type": "travel cases"
+    },
+    {
+    "_id": "636bba870b6b2c405ac46ba3",
+    "stars": 3.5,
+    "imageUrl": "https://www.sephora.com/productimages/sku/s2495687-main-zoom.jpg?imwidth=270&imwidth=164",
+    "brand": "The Ordinary",
+    "name": "Salicylic Acid 2% Anhydrous Solution Pore Clearing Serum",
+    "numReviews": 58,
+    "price": 6,
+    "category": "skincare",
+    "type": "treatments"
+    },
+    {
+    "_id": "636bba870b6b2c405ac46b7b",
+    "imageUrl": "https://www.sephora.com/productimages/sku/s2553386-main-zoom.jpg?imwidth=270&imwidth=164",
+    "brand": "MAKEUP BY MARIO",
+    "name": "Moisture Glow™ Plumping Lip Serum",
+    "stars": 4.5,
+    "numReviews": 14,
+    "price": 22,
+    "category": "makeup",
+    "type": "lip"
+    },
+    {
+    "_id": "636bba870b6b2c405ac46c38",
+    "stars": 2.5,
+    "imageUrl": "https://www.sephora.com/productimages/sku/s2204204-main-zoom.jpg?imwidth=270&pb=2020-03-sephora-clean-2019&imwidth=164",
+    "brand": "Isle of Paradise",
+    "name": "Tanning Applicator Mitt",
+    "numReviews": 150,
+    "price": 6,
+    "category": "bath",
+    "type": "tanners"
+    },
+    {
+    "_id": "636bba870b6b2c405ac46bb4",
+    "stars": 4,
+    "imageUrl": "https://www.sephora.com/productimages/sku/s1855709-main-zoom.jpg?imwidth=270&imwidth=164",
+    "brand": "Dr. Jart+",
+    "name": "Cicapair™ Tiger Grass Color Correcting Treatment SPF 30",
+    "numReviews": 4500,
+    "price": 20,
+    "category": "skincare",
+    "type": "sunscreen"
+    },
+    {
+    "_id": "636bba870b6b2c405ac46b92",
+    "stars": 4.5,
+    "imageUrl": "https://www.sephora.com/productimages/sku/s2172526-main-zoom.jpg?imwidth=270&imwidth=164",
+    "brand": "Kiehl's Since 1851",
+    "name": "Ultra Facial Moisturizing Cream with Squalane",
+    "numReviews": 1900,
+    "price": 50,
+    "category": "skincare",
+    "type": "moisturizers"
+    },
+    {
+    "_id": "636bba870b6b2c405ac46b8f",
+    "stars": 4,
+    "imageUrl": "https://www.sephora.com/productimages/sku/s2181006-main-zoom.jpg?imwidth=270&pb=2020-03-sephora-clean-2019&imwidth=164",
+    "brand": "Tatcha",
+    "name": "The Dewy Skin Cream Plumping & Hydrating Moisturizer",
+    "numReviews": 2300,
+    "price": 20,
+    "category": "skincare",
+    "type": "moisturizers"
+    },
+    {
+    "_id": "636bba870b6b2c405ac46bd0",
+    "stars": 4.5,
+    "imageUrl": "https://www.sephora.com/productimages/sku/s1999630-main-zoom.jpg?imwidth=270&imwidth=164",
+    "brand": "Moroccanoil",
+    "name": "Hydrating Styling Cream",
+    "numReviews": 1400,
+    "price": 14,
+    "category": "hair",
+    "type": "styling"
+    },
+    {
+    "_id": "636bba870b6b2c405ac46b6d",
+    "imageUrl": "https://www.sephora.com/productimages/sku/s2418101-main-zoom.jpg?imwidth=270&imwidth=164",
+    "brand": "Urban Decay",
+    "name": "24/7 Moondust Eyeshadow",
+    "stars": 4.5,
+    "numReviews": 189,
+    "price": 2,
+    "category": "makeup",
+    "type": "eye"
+    },
+    {
+    "_id": "636bba870b6b2c405ac46b67",
+    "imageUrl": "https://www.sephora.com/productimages/sku/s2116333-main-zoom.jpg?imwidth=270&imwidth=164",
+    "brand": "Charlotte Tilbury",
+    "name": "Airbrush Flawless Finish Setting Powder",
+    "stars": 4,
+    "numReviews": 1600,
+    "price": 25,
+    "category": "makeup",
+    "type": "face"
+    },
+    {
+    "_id": "636bba870b6b2c405ac46baf",
+    "stars": 4.5,
+    "imageUrl": "https://www.sephora.com/productimages/sku/s2267581-main-zoom.jpg?imwidth=270&imwidth=164",
+    "brand": "The Ordinary",
+    "name": "Salicylic Acid 2% Masque",
+    "numReviews": 510,
+    "price": 12,
+    "category": "skincare",
+    "type": "masks"
+    },
+    {
+    "_id": "636bba870b6b2c405ac46b6f",
+    "imageUrl": "https://www.sephora.com/productimages/sku/s1987783-main-zoom.jpg?imwidth=270&imwidth=164",
+    "brand": "TOM FORD",
+    "name": "Eye Color Quad Eyeshadow Palette",
+    "stars": 4.5,
+    "numReviews": 200,
+    "price": 52,
+    "category": "makeup",
+    "type": "eye"
+    }
+    ]
