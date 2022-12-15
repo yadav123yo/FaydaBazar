@@ -1,4 +1,5 @@
 import {Routes, Route} from 'react-router-dom';
+import AdminForm from '../Pages/Admin/AdminForm';
 import Dashboard from '../Pages/Admin/Dashboard';
 import Cart from '../Pages/Cart/Cart';
 import Checkout from '../Pages/Checkout/Checkout';
@@ -23,6 +24,7 @@ const AllRoutes = () => {
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/admin/dashboard" element={<Dashboard />} />
+            <Route path="/admin/adminForm" element={<AdminForm />} />
         </Routes>
     );
 }
