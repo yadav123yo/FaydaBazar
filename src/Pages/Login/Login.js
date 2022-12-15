@@ -120,7 +120,7 @@ function Login() {
           </ModalBody>
 
           <ModalFooter>
-            <Button onClick={handleSubmit} bg={"red.600"} color={"red.100"} mr={3}>
+            <Button _hover={{bg:"green"}} onClick={handleSubmit} bg={"red.500"} color={"white"} mr={3}>
               Login
             </Button>
             <Button
@@ -128,6 +128,9 @@ function Login() {
                 onClose();
                 navigate("/");
               }}
+              bg={"red"}
+              color={"white"}
+              _hover={{bg:"red"}}
             >
               Cancel
             </Button>

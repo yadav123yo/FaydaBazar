@@ -32,13 +32,13 @@ function Signup() {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
-    if (authState.message === "User already exists") {
+    if (authState.message === "User already registerd") {
       toast({
         title: authState.message,
         status: "error",
-        duration: 3000,
-        isClosable: true,
+        duration: 2000,
         position: "top",
+        isClosable: true,
       });
       dispatch({ type: AUTH_REGISTER_RESET });
     }
@@ -46,9 +46,9 @@ function Signup() {
       toast({
         title: authState.message,
         status: "success",
-        duration: 3000,
-        isClosable: true,
+        duration: 2000,
         position: "top",
+        isClosable: true,
       });
 
       dispatch({ type: AUTH_REGISTER_RESET });
@@ -94,7 +94,7 @@ function Signup() {
             {" "}
             <InputLeftElement
               pointerEvents="none"
-              children={<EmailIcon color="gray.600" />}
+              children={<EmailIcon color={"gray.600"} />}
             />
             <Input
               type="email"
@@ -120,16 +120,16 @@ function Signup() {
           </InputGroup>
 
           <Button
-            bg={"rgb(88, 88, 88)"}
+            bg={"red"}
             onClick={handleSubmit}
-            _hover={{ bg: "black" }}
+            _hover={{ bg: "green" }}
             color={"white"}
             fontSize="18px"
             w={"100%"}
           >
             {authState.loading ? "Registering..." : "Register"}
           </Button>
-          <Button onClick={() => navigate("/login")}>
+          <Button color={"red.900"} _hover={{ bg: "red" , color:"white" }} onClick={() => navigate("/login")}>
             Already a User ? Login
           </Button>
         </Stack>
