@@ -1,4 +1,4 @@
-span {
+/* span {
   display: inline;
   font-weight: bold;
 }
@@ -12,8 +12,49 @@ span {
   max-height: 200px;
   overflow: visible;
   visibility: visible;
-}
+} */
 
 /* .display1 {
   display: none;
 } */
+
+.cart{
+  padding: .5rem;
+ font-family: sans-serif;
+ height: 730px;
+}
+ .cartCard{
+  overflow-y: scroll;
+  height: 400px;
+} 
+
+
+.shoppingcart{
+ text-align: center;
+ background-color: #f0f1f7;
+}
+.cashback{
+background-color: #ffffff;
+}
+.head2{
+  background-color: #f0f1f7;
+}
+.cartCard{
+ margin-top: 2%;
+ background-color: #f0f1f7;
+}
+.cCard{
+  background-color: #ffffff;
+}
+.subTotal2{
+  margin: 24px 0px 0px 10px ;
+}
+.viewCart{
+ height: 100px;
+ padding: 5px;
+ background-color: #ffffff;
+}
+.Cshopping{
+  background-color: #f0f1f7;
+  padding: 12px;
+}
