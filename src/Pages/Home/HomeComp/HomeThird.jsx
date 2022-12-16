@@ -10,7 +10,7 @@ const HomeThird = ({data}) => {
         return(
           <Link to={`/product`}>
 
-    <Box  backgroundColor={''} alignItem='center' padding={'15px'} width={'330px'} height={'auto'} 
+    <Box  backgroundColor={''} alignItem='center' padding={'0px'} width={'330px'} height={'auto'} 
     
     > 
     <Box boxShadow= {'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'}>         

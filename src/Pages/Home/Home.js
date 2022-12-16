@@ -27,7 +27,7 @@ const Home = () => {
 <Slider2 data2={data4} img={'https://img.shop.com/Image/homepage/motives-usa-can-eng-105076-2022-holiday-banner-600x600-img-min1666019864593.jpg'}/>
 <Category shopbycategory={shopbycategory2}/>
 <HomeThird data={gifts4}/>
-<TopSellers data={data5}/>
+ <TopSellers data={data5}/> 
     </Box>
   )
 }

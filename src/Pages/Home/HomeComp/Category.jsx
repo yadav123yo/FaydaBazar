@@ -5,7 +5,7 @@ import { shopbycategory } from './HomeData'
 
 const Category = ({shopbycategory}) => {
   return (
-    <Box className='doctors3' backgroundColor={''} >
+    <Box className='doctors3' backgroundColor={''} border='1px solid black' padding={'10px'}>
 {shopbycategory.map((item)=>{
     return(
       <Link to={`/product`}>
@@ -13,7 +13,7 @@ const Category = ({shopbycategory}) => {
         <Box >
     <Image
     borderRadius='full'
-    boxSize='160px'
+    boxSize='100px'
     border='10px solid  #D9DDDC'
     src={item.image}
     alt='Dan Abramov'

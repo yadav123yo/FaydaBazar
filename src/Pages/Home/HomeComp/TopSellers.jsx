@@ -24,7 +24,7 @@ const TopSellers = ({ data }) => {
 
   return (
 
-    <div >
+    <div className='topsell'>
       <Carousel2
         show={4}
         infiniteLoop

@@ -12,6 +12,7 @@
   grid-template-rows: repeat(1, 370px);
   width: 100%;
   margin: auto;
+  border: 1px solid black;
 }
 .doctors2{
   display: grid;
@@ -48,6 +49,7 @@
    } */ 
    @media all and (min-width: 451px) and (max-width: 750px) {
     .doctors,.doctors2{
+      display: grid;
        grid-template-columns:repeat(2,1fr);
        grid-template-rows: repeat(2,auto);
     }
@@ -75,21 +77,22 @@
      .doctors3{
       display: grid;
       grid-template-columns: repeat(6,1fr);
-      grid-template-rows: repeat(1, 370px);
-      width: 100%;
+      grid-template-rows: repeat(1, auto);
+      width: 80%;
+      margin-left: 100px;
     
     }
     
        @media all and (min-width: 451px) and (max-width: 750px) {
         .doctors3{
-           grid-template-columns:repeat(4,1fr);
-           grid-template-rows: repeat(3,600);
+           grid-template-columns:repeat(3,1fr);
+           grid-template-rows: repeat(3,600px);
            height: 600px;
         }
          }
          @media all and (min-width: 751px) and (max-width: 1024px) {
           .doctors3{
-             grid-template-columns:repeat(4,1fr);
+             grid-template-columns:repeat(3,1fr);
              grid-template-rows: repeat(2,auto);
              width: max-content;
           }
@@ -99,13 +102,35 @@
            .doctors3{
            grid-template-columns:repeat(1,1fr);
            grid-template-rows: repeat(1,auto);
-           width: 5000px;
         }
     
          }
+.topsell{
+  border: 1px solid red;
+}
 
+@media all and (min-width: 451px) and (max-width: 750px) {
+  .topsell{
+     grid-template-columns:repeat(3,1fr);
+     grid-template-rows: repeat(3,600px);
+     height: 600px;
+  }
+   }
+   @media all and (min-width: 751px) and (max-width: 1024px) {
+    .topsell{
+       grid-template-columns:repeat(3,1fr);
+       grid-template-rows: repeat(2,auto);
+       width: max-content;
+    }
+     }
+   /* Small screens */
+   @media all and (min-width: 100px) and (max-width: 450px) {
+     .topsell{
+     grid-template-columns:repeat(1,1fr);
+     grid-template-rows: repeat(1,auto);
+  }
 
-
+   }
 
 
 .thirdGrid{
@@ -144,7 +169,7 @@
 .slider{
   display: flex;
   justify-content: space-around;
-  margin: 30px;
+  margin: 0px;
 
 background-color: red;
 }
@@ -162,12 +187,13 @@ background-color: red;
 }
 
 .carousel-container2 {
-  width: 1340px; 
+  width: 1240px; 
   display: flex;
   flex-direction: column;
   background-color: blue;
   justify-content: space-around;
   /* margin-top: -60px; */
+  margin-left: 100px;
 }
 .carousel-container>div>div {
    background-color: green; 
