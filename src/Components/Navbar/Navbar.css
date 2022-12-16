@@ -1,0 +1,12 @@
+.menubar{
+    margin-top: 10px;
+}
+.navcontainer{
+    background-color: #D9DDDC	;
+    padding: 0px;
+    position: sticky;
+}
+.navmenu{
+    margin-top: 10px;
+    padding: 20px;
+}
