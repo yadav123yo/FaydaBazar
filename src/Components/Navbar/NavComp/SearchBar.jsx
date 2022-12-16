@@ -12,7 +12,13 @@ const SearchBar = () => {
       fontFamily={"Roboto"}
       fontWeight={"400"} 
       color='#333333'
-      width='700px'
+      //width='700px'
+      width={[
+        '200px', // 0-30em
+        '450px', // 30em-48em
+        '555px', // 48em-62em
+        '700px', // 62em+
+      ]}
       placeholder='Search SHOP.COM'
       height='40px'
       padding='20px'
@@ -23,7 +29,12 @@ const SearchBar = () => {
       children={<SearchIcon
        backgroundColor={'black'} 
       h='40px' 
-      width={"40px"}
+      width={[
+        '40px', // 0-30em
+        '20px', // 30em-48em
+        '35px', // 48em-62em
+        '40px', // 62em+
+      ]}
       borderRadius='0px 20px 20px 0px' 
       color={"#c3c5cc"}
       margin-bottom={'24px'}

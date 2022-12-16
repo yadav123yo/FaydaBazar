@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom'
 const HomeFourth = ({data}) => {
   return (
     <Box>
-        <Flex backgroundColor={'white'} justifyContent={'center'} gap={'0px'} margin={'30px'} padding={'0px'}  >
+      <Box className='doctors2'>
     {data.map((item)=>{
         return(
-          <Link to={`/products`}>
+          <Link to={`/product`}>
 
     <Box  backgroundColor={''} alignItem='center' padding={'15px'} width={'330px'} height={'auto'} > 
     <Box boxShadow= {'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'}>           <Image src={item.img}/></Box>
@@ -18,6 +18,7 @@ const HomeFourth = ({data}) => {
             <Text textAlign='center' fontSize='xs' style={{fontWeight:'bold'}}>{item.free}</Text>
 
     </Box>
+  {/* <Flex backgroundColor={'white'} justifyContent={'center'} gap={'0px'} margin={'30px'} padding={'0px'}  > */}
 
 
 </Box>
@@ -26,7 +27,7 @@ const HomeFourth = ({data}) => {
     })}
 
    
-</Flex>
+</Box>
     </Box>
   )
 }

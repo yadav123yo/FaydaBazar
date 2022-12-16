@@ -1,17 +1,14 @@
 import React from 'react'
-import { Image, Text,Box,Flex ,Spacer} from '@chakra-ui/react'
+import { Image, Text,Box,Flex ,Spacer,Grid} from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
 const HomeThird = ({data}) => {
   return (
-    <Box >
-        <Flex  justifyContent={'center'} 
-        gap={'160px'} margin={'30px'} padding={'40px'} className={'flex-container'}
-        
-        >
+      <Box className='doctors'>
+
     {data.map((item)=>{
         return(
-          <Link to={`/products`}>
+          <Link to={`/product`}>
 
     <Box  backgroundColor={''} alignItem='center' padding={'15px'} width={'330px'} height={'auto'} 
     
@@ -33,8 +30,7 @@ const HomeThird = ({data}) => {
     })}
 
    
-</Flex>
-    </Box>
+</Box>
   )
 }
 

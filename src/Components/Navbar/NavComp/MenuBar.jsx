@@ -9,13 +9,12 @@ const MenuBar = () => {
         <Flex  justifyContent={"space-around"}>
             <h1>Categories</h1>
             <Flex gap={'40px'}>
-            <Text>Exclusive Brands</Text>
-            <Text>Stores</Text>
-            <Text>Deals</Text>
-            <Text>SHOP Travels</Text>
+            <Text>All</Text>
+            <Text>Men</Text>
+            <Text>Women</Text>
             <Text>Departments</Text>
             <Text>Shop Buddy</Text>
-            <Text>Shop Local</Text>
+            <Box cursor={"pointer"} display="flex" > <HiUserCircle style={{color: 'black', border:'1px', fontSize: '30px'}}/>Admin</Box>
 
 
             </Flex >

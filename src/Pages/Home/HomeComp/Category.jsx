@@ -5,12 +5,12 @@ import { shopbycategory } from './HomeData'
 
 const Category = ({shopbycategory}) => {
   return (
-    <Flex gap={'41px'} margin={'30px'} justifyContent={'center'} marginTop={'50px'} backgroundColor={'white'} padding={'40px'}>
+    <Box className='doctors3' backgroundColor={''} >
 {shopbycategory.map((item)=>{
     return(
-      <Link to={`/products`}>
+      <Link to={`/product`}>
 
-        <Box>
+        <Box >
     <Image
     borderRadius='full'
     boxSize='160px'
@@ -23,7 +23,7 @@ const Category = ({shopbycategory}) => {
   </Link>
   )
 })}
-</Flex>
+</Box>
   )
 }
 
