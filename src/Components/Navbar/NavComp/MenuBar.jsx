@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, Flex,Text } from '@chakra-ui/react'
 import { HiUserCircle,HiShoppingCart } from "react-icons/hi";
 import { GrRefresh } from "react-icons/gr";
+import { Link, useNavigate } from "react-router-dom";
 
 const MenuBar = () => {
   return (
@@ -9,11 +10,22 @@ const MenuBar = () => {
         <Flex  justifyContent={"space-around"}>
             <h1>Categories</h1>
             <Flex gap={'40px'}>
-            <Text>All</Text>
-            <Text>Men</Text>
-            <Text>Women</Text>
-            <Text>Departments</Text>
-            <Text>Shop Buddy</Text>
+            <Link to={`/product?category=`}>
+                 All
+              </Link>
+           
+            <Link to={`/product?category=Mens`}>
+                 Men Cloths
+              </Link>
+            <Link to={`/product?category=Womens`}>
+                 Women Cloths
+              </Link>
+            <Link to={`/`}>
+            Departments
+              </Link>
+            <Link to={`/`}>
+            Shop Buddy
+              </Link>
             <Box cursor={"pointer"} display="flex" > <HiUserCircle style={{color: 'black', border:'1px', fontSize: '30px'}}/>Admin</Box>
 
 

@@ -135,7 +135,7 @@ const AllProduct = () => {
         {
 
           data?.map((e,i) => (
-             <div id='singleProduct' key={e.id}>
+             <div id='singleProduct' key={e._id}>
               <img src={e.image} alt="" />
               <Text fontSize='xl'>{e.title}</Text>
 
@@ -144,7 +144,7 @@ const AllProduct = () => {
                     <Text fontSize="xs" as="s" color='tomato'>{e.original_price}{" "}</Text>
                     <Text color="black" fontSize="s" as='b'>₹{" "} {e.offer_price}</Text>
                     <Text color="black" fontSize="s" as='b'>₹{" "} {e.category}</Text>
-                    <Text color="black" fontSize="s" as='b'>ID{"-"} {e.id}</Text>
+                    <Text color="black" fontSize="s" as='b'>ID{"-"} {e._id}</Text>
                   </div>
                 </div>
                 
@@ -152,7 +152,7 @@ const AllProduct = () => {
 
                 <div id="productButton">
                   <Button colorScheme="white" color="black" variant='outline' className="btn1">
-                  <Link to={`/product/${e.id}`}> SEE DETAILS</Link>
+                  <Link to={`/product/${e._id}`}> SEE DETAILS</Link>
                     </Button>
                   <Spacer />
                   <Button colorScheme="facebook" className="btn2">ADD TO CART</Button>
