@@ -21,11 +21,13 @@
 .cart{
   padding: .5rem;
  font-family: sans-serif;
- height: 730px;
+ /* height: 700px; */
+ border: 2px solid red;
+ margin: 2%;
 }
  .cartCard{
-  overflow-y: scroll;
-  height: 400px;
+  overflow: auto;
+  max-height: 300px;
 } 
 
 
