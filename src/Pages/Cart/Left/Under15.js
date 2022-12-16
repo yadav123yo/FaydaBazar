@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { Box, Button,Flex, Image, Text } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
-// import { getAllProducts } from "../../../Redux/products/actions";
-// import { addProductToCart } from "../../../Redux/cart/actions";
-import {getAllProducts} from '../../../Redux/products/action'
-import {addAllProductsToCart} from '../../../Redux/cart/action'
+import { getAllProducts } from "../../../Redux/products/action";
+import { addProductToCart } from "../../../Redux/cart/action";
+// import {getAllProducts} from '../../../Redux/products/action'
+// import {addAllProductsToCart} from '../../../Redux/cart/action'
 const Under15 = () => {
   const { data } = useSelector((state) => state.products);
   const dispatch = useDispatch();
