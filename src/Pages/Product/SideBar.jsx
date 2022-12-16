@@ -8,6 +8,8 @@ import {
   UnorderedList,
   ListItem,
 } from '@chakra-ui/react'
+import "./AllProduct.css";
+
 const SideBar = () => {
   return (
     <div className='sibox'>

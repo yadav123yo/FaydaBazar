@@ -25,6 +25,8 @@
 #singleProduct{
     border: 1px solid green;
     padding: 5px;
+    height: 500px;
+    border-radius: 10px;
 }
 #singleProduct:hover{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -33,6 +35,8 @@
 #singleProduct img{
 width: 100%;
 border: 1px solid red;
+height: 70%;
+border-radius: 10px;
 }
 
 #productMrp{
@@ -72,5 +76,8 @@ border: 1px solid red;
         border: 1px solid red;
         width: 70%;
         margin: auto;
+    }
+    .sibox{
+        display:hide;
     }
   }

@@ -3,7 +3,7 @@
     {
       "id": 1,
       "category": "Mens",
-      "brand": "DENNISLINGO PREMIUM ATTIRE",
+      "singlePage_main": "DENNISLINGO PREMIUM ATTIRE",
       "title": "Striped Slim Fit Shirt",
       "price": null,
       "original_price": "₹2,499",
@@ -949,6 +949,7 @@
       "image": "https://assets.ajio.com/medias/sys_master/root/20210316/uFwv/604faf867cdb8c1f146331d3/the_indian_garage_co_blue_checked_slim_fit_shirt_with_patch_pocket.jpg"
     },
     {
+      "id": 84,
       "image": "https://assets.ajio.com/medias/sys_master/root/20210403/AcbB/6068b6caf997dd7b64643def/dennislingo_premium_attire_green_striped_slim_fit_shirt.jpg",
       "category": "Mens",
       "brand": "Adidas",
@@ -956,8 +957,7 @@
       "price": "1799",
       "original_price": "2009",
       "offer_price": 1499,
-      "discount": "(20%)",
-      "id": 84
+      "discount": "(20%)"
     },
     {
       "id": 85,
