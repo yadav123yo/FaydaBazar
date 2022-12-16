@@ -1,17 +1,113 @@
 .bodywhole{
-    background-color: #D9DDDC;
+    background-color: white;
+    align-items: center;
 }
-.flex-container{
+/* .flex-container{
   background-color: white;
   flex-direction: row;
+} */
+.doctors{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(1, 370px);
+  width: 100%;
+  margin: auto;
 }
-
-@media (max-width: 800px) {
+.doctors2{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(1, 370px);
+  width: 100%;
+  margin: auto;
+}
+/* #doctors>div{
+  
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+} */
+/* @media (max-width: 800px) {
   .flex-container {
-    flex-direction: column;
     flex-basis: 25%;
+    flex: 3;
+    flex-direction: column;
+    
+
   }
-}
+} */
+/* @media all and (min-width: 451px) and (max-width: 750px) {
+  .third{
+     grid-template-columns:repeat(2,1fr);
+     grid-template-rows: repeat(2,auto);
+  }
+   }
+   /* Small screens */
+   /* @media all and (min-width: 100px) and (max-width: 450px) {
+     .third{
+     grid-template-columns:repeat(1,1fr);
+     grid-template-rows: repeat(1,auto);
+  }
+   } */ 
+   @media all and (min-width: 451px) and (max-width: 750px) {
+    .doctors,.doctors2{
+       grid-template-columns:repeat(2,1fr);
+       grid-template-rows: repeat(2,auto);
+    }
+     }
+     @media all and (min-width: 751px) and (max-width: 1024px) {
+      .doctors,.doctors2{
+         grid-template-columns:repeat(2,1fr);
+         grid-template-rows: repeat(2,auto);
+         width: max-content;
+      }
+       }
+     /* Small screens */
+     @media all and (min-width: 100px) and (max-width: 450px) {
+       .doctors,.doctors2{
+       grid-template-columns:repeat(1,1fr);
+       grid-template-rows: repeat(1,auto);
+       width: 5000px;
+    }
+
+     }
+
+
+
+
+     .doctors3{
+      display: grid;
+      grid-template-columns: repeat(6,1fr);
+      grid-template-rows: repeat(1, 370px);
+      width: 100%;
+    
+    }
+    
+       @media all and (min-width: 451px) and (max-width: 750px) {
+        .doctors3{
+           grid-template-columns:repeat(4,1fr);
+           grid-template-rows: repeat(3,600);
+           height: 600px;
+        }
+         }
+         @media all and (min-width: 751px) and (max-width: 1024px) {
+          .doctors3{
+             grid-template-columns:repeat(4,1fr);
+             grid-template-rows: repeat(2,auto);
+             width: max-content;
+          }
+           }
+         /* Small screens */
+         @media all and (min-width: 100px) and (max-width: 450px) {
+           .doctors3{
+           grid-template-columns:repeat(1,1fr);
+           grid-template-rows: repeat(1,auto);
+           width: 5000px;
+        }
+    
+         }
+
+
+
+
+
 .thirdGrid{
     padding:15px ;
     width:360px ;

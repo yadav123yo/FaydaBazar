@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const SliderOne = ({img}) => {
   return (
-    <Link to={`/products`}>
+    <Link to={`/product`}>
 
     <div className={'Sliderone'}>
         <img width="100%" src={img} alt="" />

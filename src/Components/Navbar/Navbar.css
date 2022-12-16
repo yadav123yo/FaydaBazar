@@ -1,12 +1,37 @@
 .menubar{
-    margin-top: 10px;
+    margin-top: 0px;
 }
 .navcontainer{
     background-color: #D9DDDC	;
     padding: 0px;
-    position: sticky;
+    /* position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000 */
 }
 .navmenu{
     margin-top: 10px;
     padding: 20px;
 }
+
+@media all and (min-width: 451px) and (max-width: 750px) {
+    
+     }
+     @media all and (min-width: 751px) and (max-width: 1024px) {
+      .doctors,.doctors2{
+         grid-template-columns:repeat(2,1fr);
+         grid-template-rows: repeat(2,auto);
+         width: max-content;
+      }
+       }
+     /* Small screens */
+     @media all and (min-width: 100px) and (max-width: 450px) {
+       .doctors,.doctors2{
+       grid-template-columns:repeat(1,1fr);
+       grid-template-rows: repeat(1,auto);
+       width: 5000px;
+    }
+
+     }
+
+

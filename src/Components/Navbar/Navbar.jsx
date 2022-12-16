@@ -8,7 +8,7 @@ import OfferBar from './NavComp/OfferBar'
 const Navbar = () => {
   return (
     <Box className={'navcontainer'}>
-<OfferBar/>
+ <OfferBar/>
 
       <Flex className={'navmenu'} >
 
@@ -16,7 +16,7 @@ const Navbar = () => {
         <Box > <SearchBar/></Box>
 
       </Flex>
-      <MenuBar/>
+      <MenuBar/> 
 
     </Box>
   )

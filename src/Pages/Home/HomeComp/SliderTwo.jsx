@@ -31,7 +31,7 @@ const SliderTwo = ({ data }) => {
 
 
         {data.map((image, index) => (
-                          <Link to={`/products`}>
+                          <Link to={`/product`}>
 
           <SiderTwocard
             className="image"
