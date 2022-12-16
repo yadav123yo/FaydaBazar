@@ -1,57 +1,126 @@
 import "./AllProduct.css";
-import { Box, Button, Flex, Spacer, Text, useToast } from '@chakra-ui/react';
+import { Box, Button, Flex, Spacer, Text, useToast, SkeletonText, Grid, Skeleton,AccordionItem,  Accordion,Select, } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import { Link } from 'react-router-dom';
 import SideBar from "./SideBar";
+import { useLocation } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { getAllProducts } from "../../Redux/products/action";
+
+
 
 const AllProduct = () => {
-  const [data, setData] = useState([])
-  const [page, setpage] = useState(1);
-  const [sort, setSort] = useState("ASC");
-  const [filter, setFilter] = useState("")
-  const toast = useToast();
+  const search = useLocation().search;
+  const query = new URLSearchParams(search).get("category");
+  let [page, setPage] = useState(1);
+  const [price, setPrice] = useState([]);
+  const [sort, setSort] = useState("offer_price");
+  const [orderBy, setOrderBy] = useState("");
+  const { data } = useSelector((store) => store.products);
 
+  let length;
+  if (query === "") {
+    length = 190;
+  } else if (query === "Mens") {
+    length = 85;
+  } else if (query === "Womens") {
+    length = 105;
+  }
+  const [prevQuery, setPrevQuery] = useState(query);
+  const {
+    AllProducts: { loading },
+  } = useSelector((store) => store.products);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    if (prevQuery !== query) {
+      setPage(1);
+    }
+    dispatch(
+      getAllProducts({ category: query, page: page, price, sort, orderBy })
+    );
+    setPrevQuery(query);
+  }, [dispatch, query, page, prevQuery, price, sort, orderBy]);
 
-  function getData(page, sort="asc") {
-    axios.get(`http://localhost:8080/products?_page=${page}&_limit=12&orderBy=offer_price&_order=${sort}`)
-    // axios.get(`http://localhost:8080/products?_page=${page}&_limit=12`)
-        .then((res) => setData(res.data))
-        .catch((err) => console.log(err))
-}
-// console.log(data)
-
-  function handlesortA() {
-    let acs = data.sort((a, b) => a.offer_price - b.offer_price)
-    console.log(acs)
-    setData(acs)
-    setSort("DESC")
-
-}
-
-function handlesortB() {
-    let acs = data.sort((a, b) => b.offer_price - a.offer_price)
-    setData(acs)
-    console.log(acs)
-    setSort("ASC")
-}
-
-useEffect(() => {
-    getData(page, sort)
-}, [page, sort])
-
+  if(loading){
+    return <Grid
+      w={{
+        base: "100%",
+        md: "90%",
+        lg: "80%",
+      }}
+      m="auto"
+      templateColumns={{
+        base: "repeat(1,1fr)",
+        md: "repeat(2,1fr)",
+        lg: "repeat(3,1fr)",
+      }}
+      gap="10"
+      p="10"
+    >
+      {new Array(20).fill(0).map((e, i) => (
+        <Box w=" 100%" m="auto" boxShadow="lg" bg="white" key={i}>
+          <Skeleton size="10" h="180px" />
+          <SkeletonText
+            w="80%"
+            m="auto"
+            mb="20px"
+            mt="4"
+            noOfLines={4}
+            spacing="4"
+          />
+        </Box>
+      ))}
+    </Grid>
+  
+      }
+ 
   return (
     <div>
       <div id="productPage">
         {/* this is filter Div */}
         <div id="filterDiv">
           <Box className='so3'>
-              <Box className='so1'>
-                  <h1 className='soh1'>Sort By:</h1>
-                  <Button className='sortbtn'>Popularity</Button>
-                  <Button className='sortbtn' onClick={handlesortA}>High to Low</Button>
-                  <Button className='sortbtn' onClick={handlesortB}>Low to High</Button>
-              </Box>
+          <Accordion allowToggle>
+            {/* <AccordionItem>
+              <Select
+                placeholder="Price ₹"
+                onChange={({ target }) => {
+                  let array = target.value.split(":").map(Number);
+                  for (let i = 0; i < array.length; i++) {
+                    array[i] = array[i] ;
+                  }
+                  setPrice(array);
+                }}
+                textAlign="center"
+              >
+                <option value="0:500">Below 500</option>
+                <option value="500:1000">500 - 1000</option>
+                <option value="1000:1500">1000 - 1500</option>
+                <option value="1500:2000">1500 - 2000</option>
+                <option value="2000:2500">2000 - 2500</option>
+                <option value="2500:10000000">Above 2500</option>
+              </Select>
+            </AccordionItem> */}
+            <AccordionItem>
+              <Select
+                placeholder="Price"
+                textAlign="center"
+                onChange={({ target }) => {
+                  if (target.value === "increasing") {
+                    setSort("offer_price");
+                    setOrderBy("asc");
+                  } else {
+                    setSort("offer_price");
+                    setOrderBy("desc");
+                  }
+                }}
+              >
+                <option value="increasing">Low to High</option>
+                <option value="decreasing">High to Low</option>
+              </Select>
+            </AccordionItem>
+          </Accordion>
           </Box>
         </div>
 
@@ -65,7 +134,7 @@ useEffect(() => {
                 <div id="productList">
         {
 
-          data?.map((e) => (
+          data?.map((e,i) => (
              <div id='singleProduct' key={e.id}>
               <img src={e.image} alt="" />
               <Text fontSize='xl'>{e.title}</Text>
@@ -98,9 +167,16 @@ useEffect(() => {
 
 
                     <Flex justifyContent="center" gap="30px" marginTop="30px">
-                        <Button disabled={page === 1} colorScheme='teal' variant='solid' onClick={() => setpage((prev) => prev - 1)}>Prev</Button>
-                        <Button>{page}</Button>
-                        <Button disabled={page === 100} colorScheme='teal' variant='solid' onClick={() => setpage((prev) => prev + 1)}>Next</Button>
+                    <Button disabled={page === 1} onClick={() => setPage(page - 1)}>
+            Prev
+          </Button>
+          <Button>{page}</Button>
+          <Button
+            disabled={page === Math.ceil(length / 20)}
+            onClick={() => setPage(page + 1)}
+          >
+            Next
+          </Button>
                     </Flex>
       </div>
     </div>
