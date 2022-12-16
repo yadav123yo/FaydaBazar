@@ -5,7 +5,7 @@ import axios from "axios"
 import { Link } from 'react-router-dom';
 import SideBar from "./SideBar";
 
-const AllProduct = () => {
+const MensPage = () => {
   const [data, setData] = useState([])
   const [page, setpage] = useState(1);
   const [sort, setSort] = useState("ASC");
@@ -13,9 +13,9 @@ const AllProduct = () => {
   const toast = useToast();
 
 
-  function getData(page, sort="asc") {
-    axios.get(`http://localhost:8080/products?_page=${page}&_limit=12&orderBy=offer_price&_order=${sort}`)
-    // axios.get(`http://localhost:8080/products?_page=${page}&_limit=12`)
+  function getData(page, sort) {
+    // axios.get(`http://localhost:8080/products?_page=${page}&_limit=12&_orderBy=offer_price&_order=${sort}`)
+    axios.get(`http://localhost:8080/products`)
         .then((res) => setData(res.data))
         .catch((err) => console.log(err))
 }
@@ -65,7 +65,7 @@ useEffect(() => {
                 <div id="productList">
         {
 
-          data?.map((e) => (
+          data.filter(e=>e.category==="Mens").map((e) => (
              <div id='singleProduct' key={e.id}>
               <img src={e.image} alt="" />
               <Text fontSize='xl'>{e.title}</Text>
@@ -82,9 +82,7 @@ useEffect(() => {
                 <Text color="teal" fontSize="xs">Free Shipping</Text>
 
                 <div id="productButton">
-                  <Button colorScheme="white" color="black" variant='outline' className="btn1">
-                  <Link to={`/product/${e.id}`}> SEE DETAILS</Link>
-                    </Button>
+                  <Button colorScheme="white" color="black" variant='outline' className="btn1">SEE DETAILS</Button>
                   <Spacer />
                   <Button colorScheme="facebook" className="btn2">ADD TO CART</Button>
                 </div>
@@ -107,7 +105,7 @@ useEffect(() => {
   )
 }
 
-export default AllProduct
+export default MensPage
 
 
 

@@ -1,0 +1,15 @@
+#qty_payment{
+    padding: 10px;
+}
+
+@media  (min-width:600px) and (max-width: 1500px)  {
+    #singlePage_main{
+        display: grid;
+        /* grid-template-columns: repeat(1,1fr); */
+        flex-wrap: wrap;
+        gap: 20px;
+        border: 1px solid red;
+        width: 70%;
+        margin: auto;
+    }
+  }
