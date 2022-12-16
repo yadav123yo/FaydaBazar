@@ -1,0 +1,180 @@
+.bodywhole{
+    background-color: #D9DDDC;
+}
+.flex-container{
+  background-color: white;
+  flex-direction: row;
+}
+
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+    flex-basis: 25%;
+  }
+}
+.thirdGrid{
+    padding:15px ;
+    width:360px ;
+    height:400px ;
+
+}
+.center{
+    background-color: #D9DDDC;
+
+}
+.card{
+    background-color: whitesmoke;
+    height: 450px;
+}
+.each-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 500px;
+  
+    /* width: 100%; */
+    z-index: -1;
+    /* margin-bottom: -150px; */
+    /* mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); */
+  }
+  .sideContainer{
+    margin-left: 600px;
+    margin-top: -55px;
+    white-space: pre-wrap;
+    text-align: left
+
+}
+.slider{
+  display: flex;
+  justify-content: space-around;
+  margin: 30px;
+
+background-color: red;
+}
+.Sliderone{
+    background-color: aqua;
+}
+
+.carousel-container {
+  width: 850px; 
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+  justify-content: space-around;
+  /* margin-top: -60px; */
+}
+
+.carousel-container2 {
+  width: 1340px; 
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+  justify-content: space-around;
+  /* margin-top: -60px; */
+}
+.carousel-container>div>div {
+   background-color: green; 
+  height: 440px;
+
+}
+.carousel-wrapper {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.carousel-content-wrapper {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-content {
+  display: flex;
+  transition: all 250ms linear;
+  -ms-overflow-style: none;  /* hide scrollbar in IE and Edge */
+  scrollbar-width: none;  /* hide scrollbar in Firefox */
+}
+
+/* hide scrollbar in webkit browser */
+.carousel-content::-webkit-scrollbar, .carousel-content::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-content > * {
+  width: 100%;
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+.carousel-content.show-2 > * {
+  width: 150%;
+}
+
+.carousel-content.show-3 > * {
+  width: calc(100% / 3);
+}
+
+.carousel-content.show-4 > * {
+  width: calc(100% / 4);
+}
+
+.left-arrow, .right-arrow {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-60%);
+  width: 58px;
+  height: 58px;
+  background-color:white;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.left-arrow {
+  left: 24px;
+}
+
+.right-arrow {
+  right: 24px;
+}
+
+@media (hover:-webkit-scrollbar) and (pointer: coarse) {
+  .left-arrow, .right-arrow {
+      display: none;
+  }
+}
+.imh{
+  width: 10%;
+}
+
+.category{
+  display: flex;
+  flex-direction: row;
+  margin-top: 80px;
+}
+.head{
+  margin-top: 50px;
+}
+.friday{
+  display: flex;
+  flex-direction: row;
+}
+.card{
+  align-items: center;
+}
+
+.Ccontainer{
+  padding: 10px;
+  display: flex;
+  gap: 63px;
+  margin-left: 450px;
+  cursor: pointer;
+}
+.Ccontainer:hover{
+  border: black;
+}
+.ground:hover{
+  text-decoration: underline;
+}
