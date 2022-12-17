@@ -54,7 +54,7 @@ const SingleProduct = () => {
     dispatch(getSingleProduct(id));
     dispatch(getAllProducts({ category: data.category }));
   }, [dispatch, id, data.category]);
-  const { stars, numReviews } = data;
+  
   const handleChange = (value) => setValue(value);
   // console.log(auth);
   const toast = useToast();
