@@ -2,13 +2,11 @@ import React from 'react'
 import { ReactNode } from 'react';
 import { HiUserCircle,HiShoppingCart } from "react-icons/hi";
 import { GrRefresh } from "react-icons/gr";
-
 import {
   Box,
   Flex,
   Avatar,
   HStack,
-  Link,
   IconButton,
   Button,
   Menu,
@@ -18,11 +16,11 @@ import {
   MenuDivider,
   useDisclosure,
   useColorModeValue,
-  Stack,Text
+  Stack,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-
-const Links = ['Dashboard', 'Projects', 'Team'];
+import {Link }from 'react-router-dom'
+// const Links = ['Dashboard', 'Projects', 'Team'];
 
 const NavLink = ({ children }) => (
   <Link
@@ -38,14 +36,10 @@ const NavLink = ({ children }) => (
   </Link>
 );
 
-import { Link, useNavigate } from "react-router-dom";
-
-
 const MenuBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-
     <div>
         <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
@@ -62,45 +56,7 @@ const MenuBar = () => {
               as={'nav'}
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>
-            Flex gap={'40px'}
-            <Link to={`/product?category=`}>
-                 
-                 <Text as='b'>All</Text>
-
-              </Link>
-           
-            <Link to={`/product?category=Mens`}>
-                 <Text as='b'>Men Cloths</Text>
-              </Link>
-            <Link to={`/product?category=Womens`}>
-                 <Text as='b'>Women Cloths</Text>
-
-              </Link>
-            <Link to={`/`}>
-            
-            <Text as='b'>Departments</Text>
-
-              </Link>
-            <Link to={`/`}>
-            <Text as='b'>Shop Buddy</Text>
-
-              </Link>
-            </HStack>
-          </HStack>
-          <Flex alignItems={'center'}>
-            <Menu>
-              <MenuItem
-                
-                
-      >
-                
-                 <Flex gap={'40px'} className='hide'            display={{ base: 'none', sm: 'inline-flex'  }}
- >
-
-    <Box className='menubar'>
-        <Flex  justifyContent={"space-around"}>
-            <h1>Categories</h1>
-            <Flex gap={'40px'}>
+Flex gap={'40px'}
             <Link to={`/product?category=`}>
                  All
               </Link>
@@ -117,16 +73,20 @@ const MenuBar = () => {
             <Link to={`/`}>
             Shop Buddy
               </Link>
-            <Box cursor={"pointer"} display="flex" > <HiUserCircle style={{color: 'black', border:'1px', fontSize: '30px'}}/>Admin</Box>
-
-
-            </Flex >
-            <Flex gap={'40px'}>
-
+            </HStack>
+          </HStack>
+          <Flex alignItems={'center'}>
+            <Menu>
+              <MenuItem
+                
+                
+      >
+                
+                 <Flex gap={'40px'} className='hide'            display={{ base: 'none', sm: 'inline-flex'  }}
+ >
             <Box cursor={"pointer"} display="flex" > <HiUserCircle style={{color: 'black', border:'1px', fontSize: '30px'}}/> Sign in</Box>
-            <Box cursor={"pointer"} display="flex" > <GrRefresh style={{color: 'black', border:'1px', fontSize: '30px'}}/>Orders </Box>
             <Box cursor={"pointer"} display="flex" > <HiShoppingCart style={{color: 'black', border:'1px', fontSize: '30px'}}/>Cart </Box>
-            <Box cursor={"pointer"} display="flex" > <HiUserCircle style={{color: 'black', border:'1px', fontSize: '30px'}}/>Admin </Box>
+            <Box cursor={"pointer"} display="flex" > <HiUserCircle style={{color: 'black', border:'1px', fontSize: '30px'}}/>Admin</Box>
 
             </Flex>
               </MenuItem>
@@ -160,12 +120,12 @@ const MenuBar = () => {
             <Link to={`/`}>
             Shop Buddy
               </Link>
-              <Flex gap={'40px'} flexDirection={'column'}>
+              {/* <Flex gap={'40px'} flexDirection={'column'}>
             <Box cursor={"pointer"} display="flex" > <HiUserCircle style={{color: 'black', border:'1px', fontSize: '30px'}}/> Sign in</Box>
-            <Box cursor={"pointer"} display="flex" > <GrRefresh style={{color: 'black', border:'1px', fontSize: '30px'}}/>Orders </Box>
             <Box cursor={"pointer"} display="flex" > <HiShoppingCart style={{color: 'black', border:'1px', fontSize: '30px'}}/>Cart </Box>
+            <Box cursor={"pointer"} display="flex" > <HiUserCircle style={{color: 'black', border:'1px', fontSize: '30px'}}/>Admin </Box>
 
-            </Flex>
+            </Flex> */}
             </Stack>
           </Box>
         ) : null}
