@@ -13,7 +13,7 @@ import {
       dispatch({ type: AUTH_REGISTER_REQUEST });
   
       const res = await axios.post(
-        "https://faydab.onrender.com//user/register",
+        "https://faydab.onrender.com/user/register",
         data
       );
       // console.log('res: ', res);
@@ -40,7 +40,7 @@ import {
       dispatch({ type: AUTH_LOGIN_REQUEST });
   
       const res = await axios.post(
-        "https://faydab.onrender.com//user/login",
+        "https://faydab.onrender.com/user/login",
         data
       );
       // console.log("res: ", res);

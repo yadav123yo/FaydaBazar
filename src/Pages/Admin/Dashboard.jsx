@@ -62,6 +62,31 @@ return (
                   </Text>
                   <Text color="grey">Brand: {item.brand.slice(0, 10)}</Text>
                   <Text color="grey">Price: {item.offer_price}₹</Text>
+
+                  <Flex>
+                    <Button
+                      marginTop={5}
+                      colorScheme="red"
+                      variant="outline"
+                      onClick={() => {
+                       
+                      }}
+                    >
+                      Delete
+                    </Button>
+
+                    <Button
+                      onClick={() => {
+                      
+                      }}
+                      marginTop={5}
+                      marginLeft="5"
+                      colorScheme="blue"
+                      variant="outline"
+                    >
+                      Update
+                    </Button>
+                  </Flex>
                   <Flex>
                   </Flex>
                 </div>

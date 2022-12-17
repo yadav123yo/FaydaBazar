@@ -1,60 +1,45 @@
-/* span {
-  display: inline;
-  font-weight: bold;
+#cartPage{
+    padding: 30px;
 }
 
-#explore-more-div {
-  max-height: 0px;
-  overflow: hidden;
+#mainCartDiv{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    margin-top: 1%;
+    margin-bottom: 5%;
 }
 
-#explore-more-label:checked #explore-more-div {
-  max-height: 200px;
-  overflow: visible;
-  visibility: visible;
-} */
+#CartProductDiv{
+    padding: 10px;
+}
 
-/* .display1 {
-  display: none;
-} */
+#upperDiv{
+    background-color: #f0f1f7;
+    padding: 5px;
+}
 
-.cart{
-  padding: .5rem;
- font-family: sans-serif;
- height: 730px;
+#productDiv{
+    display: flex;
+    gap: 20px;
+    margin-top: 5%;
 }
- .cartCard{
-  overflow-y: scroll;
-  height: 400px;
-} 
 
+#leftDiv img{
+    height: 100px;
+    width: 100px;
+}
 
-.shoppingcart{
- text-align: center;
- background-color: #f0f1f7;
+#rightDiv{
+    width: 40%;
 }
-.cashback{
-background-color: #ffffff;
+
+#CartTotalDiv{
+    background-color: #f0f1f7;
+    padding: 30px;
 }
-.head2{
-  background-color: #f0f1f7;
-}
-.cartCard{
- margin-top: 2%;
- background-color: #f0f1f7;
-}
-.cCard{
-  background-color: #ffffff;
-}
-.subTotal2{
-  margin: 24px 0px 0px 10px ;
-}
-.viewCart{
- height: 100px;
- padding: 5px;
- background-color: #ffffff;
-}
-.Cshopping{
-  background-color: #f0f1f7;
-  padding: 12px;
+
+#checkOutDiv{
+    display: flex;
+    justify-content: right;
 }

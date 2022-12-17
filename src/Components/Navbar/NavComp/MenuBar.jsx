@@ -2,6 +2,7 @@ import React from 'react'
 import { ReactNode } from 'react';
 import { HiUserCircle,HiShoppingCart } from "react-icons/hi";
 import { GrRefresh } from "react-icons/gr";
+
 import {
   Box,
   Flex,
@@ -37,10 +38,14 @@ const NavLink = ({ children }) => (
   </Link>
 );
 
+import { Link, useNavigate } from "react-router-dom";
+
+
 const MenuBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
+
     <div>
         <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
@@ -91,6 +96,33 @@ const MenuBar = () => {
                 
                  <Flex gap={'40px'} className='hide'            display={{ base: 'none', sm: 'inline-flex'  }}
  >
+
+    <Box className='menubar'>
+        <Flex  justifyContent={"space-around"}>
+            <h1>Categories</h1>
+            <Flex gap={'40px'}>
+            <Link to={`/product?category=`}>
+                 All
+              </Link>
+           
+            <Link to={`/product?category=Mens`}>
+                 Men Cloths
+              </Link>
+            <Link to={`/product?category=Womens`}>
+                 Women Cloths
+              </Link>
+            <Link to={`/`}>
+            Departments
+              </Link>
+            <Link to={`/`}>
+            Shop Buddy
+              </Link>
+            <Box cursor={"pointer"} display="flex" > <HiUserCircle style={{color: 'black', border:'1px', fontSize: '30px'}}/>Admin</Box>
+
+
+            </Flex >
+            <Flex gap={'40px'}>
+
             <Box cursor={"pointer"} display="flex" > <HiUserCircle style={{color: 'black', border:'1px', fontSize: '30px'}}/> Sign in</Box>
             <Box cursor={"pointer"} display="flex" > <GrRefresh style={{color: 'black', border:'1px', fontSize: '30px'}}/>Orders </Box>
             <Box cursor={"pointer"} display="flex" > <HiShoppingCart style={{color: 'black', border:'1px', fontSize: '30px'}}/>Cart </Box>

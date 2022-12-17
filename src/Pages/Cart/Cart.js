@@ -1,107 +1,63 @@
+import { Box, Button, Flex, Spacer, Text } from "@chakra-ui/react";
 import React from "react";
-import { Link } from "react-router-dom";
-import {
-  Container,
-  Box,
-  Flex,
-  Spacer,
-  Image,
-  Text,
-  Button,
-} from "@chakra-ui/react";
-import "./Cart.css";
-const property = {
-  imageUrl: "https://bit.ly/2Z4KKcF",
-  imageAlt: "Rear view of modern home with pool",
-  beds: 3,
-  baths: 2,
-  title: "Modern home in city center in the heart of historic Los Angeles",
-  formattedPrice: "$19.00",
-  reviewCount: 34,
-  rating: 4,
-};
+import "./Cart.css"
 
 const Cart = () => {
-  return (
-    <Container maxW="container.sm" className="cart">
-      <Box className="head1">
-        <Box p={2} className="shoppingcart">Shopping Cart</Box>
-        <Box className="cashback" p={2}>
-          Earned cashback
-        </Box>
-      </Box>
+  return <div id="cartPage">
+   <Text fontSize='3xl' as='b'>Your Cart</Text>
 
-      <Box className="head2">
-        <Flex>
-          <Text h="55px" className="head21" p={2}>
-            Unbetale
-          </Text>
-          <Spacer />
-          <Text h="55px" className="head22" p={2}>
-            {property.formattedPrice}
-            <Box>
-              <Link>see more</Link>
-            </Box>
-          </Text>
-        </Flex>
-        <Box className="cartCard">
-          <Box className="cCard" h="180px">
-            <Flex>
-              <Image
-                boxSize="180px"
-                objectFit="cover"
-                src={property.imageUrl}
-                alt={property.imageAlt}
-              />
-              <Box>
-                <Text p="2">{property.title}</Text>
-                <Flex>
-                  <Box>
-                    <Text p="2">{property.formattedPrice}</Text>
-                  </Box>
-                  <Spacer />
-                  <Box boxSize="80px">
-                    <Flex>
-                      <Box>
-                        <Text>^</Text>
-                        <Text>{property.rating}</Text>
-                        <Text>^</Text>
-                      </Box>
-                      <Box className="subTotal2">{property.formattedPrice}</Box>
-                    </Flex>
-                  </Box>
-                </Flex>
-              </Box>
-            </Flex>
-          </Box>
+   <div id="mainCartDiv">
+    <div id="CartProductDiv">
+      <Text fontSize='2xl' as='b'>Shipment from KixRx</Text>
+      <hr />
+      <div id="upperDiv">
+        <Text>Congratulations! Your order qualifies for free shipping from KixRx. </Text>
+        <button>Learn More</button>
+      </div>
+
+      <div id="productDiv">
+        <div id="leftDiv">
+          <img src="https://img.shop.com/Image/280000/282100/282141/products/1911627003__100x100__.jpg" alt="Product_Image" />
+        </div>
+        <div id="rightDiv">
+          <Text fontSize='l' as='b'>Nike Air Force 1 '07 White CW2288-111 Men's</Text>
+          <Text fontSize='xl' >$ 143</Text>
+        </div>
+        <Spacer />
+
+        <Button colorScheme='teal' size='md'>Remove</Button>
+      </div>
+      <hr />
+      <Flex>
+        <Box p='4'>
+          Store Total:-
         </Box>
-      </Box>
-      <Box className="viewCart">
-        <Text>Subtotal : 66</Text>
-        <Box>
-          <Button
-            borderRadius="22px"
-            width="100%"
-            colorScheme="pink"
-            variant="solid"
-          >
-            View Cart/Checkout
-          </Button>
+        <Spacer />
+        <Box p='4'>
+         $ 143
         </Box>
-      </Box>
-      <Box className="Cshopping">
-        <Button
-          borderRadius="20px"
-          width="100%"
-          border="2px"
-          colorScheme="blue"
-          variant="solid"
-        >
-          Continue Shopping
-        </Button>
-      </Box>
-    </Container>
-  );
+      </Flex>
+    </div>
+
+    {/* cart total div on left side */}
+    <div id="CartTotalDiv">
+      <Text fontSize='2xl' as='b'>Order Total</Text>
+      <hr />
+      <Flex>
+        <Box p='4'>
+          Subtotal:-
+        </Box>
+        <Spacer />
+        <Box p='4'>
+         $ 143
+        </Box>
+      </Flex>
+        <div id="checkOutDiv">
+          <Button colorScheme="facebook">Proceed to Checkout</Button>
+        </div>
+    </div>
+   </div>
+    </div>;
 };
 
 export default Cart;

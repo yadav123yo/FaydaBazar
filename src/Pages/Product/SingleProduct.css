@@ -13,3 +13,29 @@
         margin: auto;
     }
   }
+
+
+  .proAdd {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    gap: 1rem;
+  }
+  .proAdd button {
+    background-color: #cf112c;
+    color: white;
+    padding: 10px 2rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .proAdd button:hover {
+    background-color: #ed2241;
+  }
+  .proAdd div {
+    font-size: 30px;
+    color: #ed2241;
+  }

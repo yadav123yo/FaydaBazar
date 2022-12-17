@@ -82,26 +82,6 @@ const AllProduct = () => {
         <div id="filterDiv">
           <Box className='so3'>
           <Accordion allowToggle>
-            {/* <AccordionItem>
-              <Select
-                placeholder="Price ₹"
-                onChange={({ target }) => {
-                  let array = target.value.split(":").map(Number);
-                  for (let i = 0; i < array.length; i++) {
-                    array[i] = array[i] ;
-                  }
-                  setPrice(array);
-                }}
-                textAlign="center"
-              >
-                <option value="0:500">Below 500</option>
-                <option value="500:1000">500 - 1000</option>
-                <option value="1000:1500">1000 - 1500</option>
-                <option value="1500:2000">1500 - 2000</option>
-                <option value="2000:2500">2000 - 2500</option>
-                <option value="2500:10000000">Above 2500</option>
-              </Select>
-            </AccordionItem> */}
             <AccordionItem>
               <Select
                 placeholder="Price"
@@ -135,7 +115,7 @@ const AllProduct = () => {
         {
 
           data?.map((e,i) => (
-             <div id='singleProduct' key={e.id}>
+             <div id='singleProduct' key={e._id}>
               <img src={e.image} alt="" />
               <Text fontSize='xl'>{e.title}</Text>
 
@@ -144,7 +124,7 @@ const AllProduct = () => {
                     <Text fontSize="xs" as="s" color='tomato'>{e.original_price}{" "}</Text>
                     <Text color="black" fontSize="s" as='b'>₹{" "} {e.offer_price}</Text>
                     <Text color="black" fontSize="s" as='b'>₹{" "} {e.category}</Text>
-                    <Text color="black" fontSize="s" as='b'>ID{"-"} {e.id}</Text>
+                    <Text color="black" fontSize="s" as='b'>ID{"-"} {e._id}</Text>
                   </div>
                 </div>
                 
@@ -152,7 +132,7 @@ const AllProduct = () => {
 
                 <div id="productButton">
                   <Button colorScheme="white" color="black" variant='outline' className="btn1">
-                  <Link to={`/product/${e.id}`}> SEE DETAILS</Link>
+                  <Link to={`/product/${e._id}`}> SEE DETAILS</Link>
                     </Button>
                   <Spacer />
                   <Button colorScheme="facebook" className="btn2">ADD TO CART</Button>
