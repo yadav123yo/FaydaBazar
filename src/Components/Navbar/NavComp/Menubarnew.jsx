@@ -17,7 +17,7 @@ import {
   MenuDivider,
   useDisclosure,
   useColorModeValue,
-  Stack,Text
+  Stack,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
@@ -37,7 +37,7 @@ const NavLink = ({ children }) => (
   </Link>
 );
 
-const MenuBar = () => {
+const Menubarnew = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -57,28 +57,22 @@ const MenuBar = () => {
               as={'nav'}
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>
-            Flex gap={'40px'}
+Flex gap={'40px'}
             <Link to={`/product?category=`}>
-                 
-                 <Text as='b'>All</Text>
-
+                 All
               </Link>
            
             <Link to={`/product?category=Mens`}>
-                 <Text as='b'>Men Cloths</Text>
+                 Men Cloths
               </Link>
             <Link to={`/product?category=Womens`}>
-                 <Text as='b'>Women Cloths</Text>
-
+                 Women Cloths
               </Link>
             <Link to={`/`}>
-            
-            <Text as='b'>Departments</Text>
-
+            Departments
               </Link>
             <Link to={`/`}>
-            <Text as='b'>Shop Buddy</Text>
-
+            Shop Buddy
               </Link>
             </HStack>
           </HStack>
@@ -143,4 +137,4 @@ const MenuBar = () => {
   )
 }
 
-export default MenuBar
+export default Menubarnew
