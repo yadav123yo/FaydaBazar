@@ -82,26 +82,6 @@ const AllProduct = () => {
         <div id="filterDiv">
           <Box className='so3'>
           <Accordion allowToggle>
-            {/* <AccordionItem>
-              <Select
-                placeholder="Price ₹"
-                onChange={({ target }) => {
-                  let array = target.value.split(":").map(Number);
-                  for (let i = 0; i < array.length; i++) {
-                    array[i] = array[i] ;
-                  }
-                  setPrice(array);
-                }}
-                textAlign="center"
-              >
-                <option value="0:500">Below 500</option>
-                <option value="500:1000">500 - 1000</option>
-                <option value="1000:1500">1000 - 1500</option>
-                <option value="1500:2000">1500 - 2000</option>
-                <option value="2000:2500">2000 - 2500</option>
-                <option value="2500:10000000">Above 2500</option>
-              </Select>
-            </AccordionItem> */}
             <AccordionItem>
               <Select
                 placeholder="Price"
