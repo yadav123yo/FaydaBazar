@@ -12,7 +12,6 @@
   grid-template-rows: repeat(1, 370px);
   width: 100%;
   margin: auto;
-  border: 1px solid black;
 }
 .doctors2{
   display: grid;
@@ -57,8 +56,9 @@
      @media all and (min-width: 751px) and (max-width: 1024px) {
       .doctors,.doctors2{
          grid-template-columns:repeat(2,1fr);
-         grid-template-rows: repeat(2,auto);
+         grid-template-rows: repeat(1,auto);
          width: max-content;
+         overflow: hidden;
       }
        }
      /* Small screens */
@@ -66,7 +66,9 @@
        .doctors,.doctors2{
        grid-template-columns:repeat(1,1fr);
        grid-template-rows: repeat(1,auto);
-       width: 5000px;
+       width: 400px;
+       align-items: center;
+       margin: auto;
     }
 
      }
@@ -79,7 +81,7 @@
       grid-template-columns: repeat(6,1fr);
       grid-template-rows: repeat(1, auto);
       width: 80%;
-      margin-left: 100px;
+      margin: auto;
     
     }
     
@@ -94,7 +96,7 @@
           .doctors3{
              grid-template-columns:repeat(3,1fr);
              grid-template-rows: repeat(2,auto);
-             width: max-content;
+             width: 660px;
           }
            }
          /* Small screens */
@@ -187,14 +189,53 @@ background-color: red;
 }
 
 .carousel-container2 {
-  width: 1240px; 
-  display: flex;
+  width: 1340px; 
+  display: grid;
   flex-direction: column;
   background-color: blue;
   justify-content: space-around;
   /* margin-top: -60px; */
-  margin-left: 100px;
+  grid-template-columns:repeat(3,1fr);
+
 }
+
+
+@media all and (min-width: 451px) and (max-width: 750px) {
+  .carousel-container2,.carousel-container{
+     grid-template-columns:repeat(3,1fr);
+     grid-template-rows: repeat(3,600px);
+     width: 940px; 
+overflow: hidden;
+display: none;
+  }
+   }
+
+   @media all and (min-width: 751px) and (max-width: 1024px) {
+    .carousel-container2.carousel-container{
+       grid-template-columns:repeat(3,1fr);
+       grid-template-rows: repeat(2,auto);
+       width: 700px;
+       overflow: hidden;
+display: none;
+    }
+     }
+   /* Small screens */
+   @media all and (min-width: 100px) and (max-width: 450px) {
+     .carousel-container2.carousel-container{
+     grid-template-columns:repeat(1,1fr);
+     grid-template-rows: repeat(1,auto);
+     width: 500px;
+     overflow: hidden;
+  }
+
+   }
+
+
+
+
+
+
+
 .carousel-container>div>div {
    background-color: green; 
   height: 440px;

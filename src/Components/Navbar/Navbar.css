@@ -13,6 +13,12 @@
     margin-top: 10px;
     padding: 20px;
 }
+.navbarside{
+  border: 1px solid red;
+}
+ #nav-check {
+  display: none;
+}
 
 @media all and (min-width: 451px) and (max-width: 750px) {
     
@@ -34,4 +40,30 @@
 
      }
 
+
+
+     @media all and (min-width: 451px) and (max-width: 750px) {
+    
+     }
+     @media all and (min-width: 751px) and (max-width: 1024px) {
+      .hide{
+background-color: blue;
+display: none;
+
+      }
+       }
+       
+     /* Small screens */
+     @media all and (min-width: 451px) and (max-width: 750px) {
+       .hide{
+       display: none;
+    }}
+    @media all and (min-width: 100px) and (max-width: 450px) {
+      .hide{
+      display: none;
+      background-color: pink;
+      
+
+   }
+     }
 

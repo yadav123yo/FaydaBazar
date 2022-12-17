@@ -4,6 +4,7 @@ import MenuBar from './NavComp/MenuBar'
 import SearchBar from './NavComp/SearchBar'
 import './Navbar.css'
 import OfferBar from './NavComp/OfferBar'
+import Menubarnew from './NavComp/Menubarnew'
 
 const Navbar = () => {
   return (
@@ -17,7 +18,7 @@ const Navbar = () => {
 
       </Flex>
       <MenuBar/> 
-
+ {/* <Menubarnew/>  */}
     </Box>
   )
 }
