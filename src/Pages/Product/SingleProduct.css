@@ -104,7 +104,7 @@ li span {
   gap: 1rem;
 }
 .proAdd button {
-  background-color: #cf112c;
+  background-color: teal;
   color: white;
   padding: 10px 2rem;
   border-radius: 50px;
@@ -115,7 +115,8 @@ li span {
   font-size: 14px;
 }
 .proAdd button:hover {
-  background-color: #ed2241;
+  background-color:rgb(30, 152, 152);
+  color: black;
 }
 .proAdd div {
   font-size: 30px;
