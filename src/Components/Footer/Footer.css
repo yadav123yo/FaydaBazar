@@ -1,3 +1,47 @@
 .footerbar{
     background-color: #2c3e4c;
 }
+@media all and (min-width: 751px) and (max-width: 1024px) {
+    .respo{
+        flex-wrap: wrap;
+
+    }
+    .menubar{
+        display: none;
+    }
+    .newres{
+        width: max-content;
+
+        display: none;
+
+      flex-direction: column;
+        flex: 3;
+    }
+     }
+     
+   /* Small screens */
+   @media all and (min-width: 451px) and (max-width: 750px) {
+     .newres{
+        flex-direction: column;
+        flex-wrap: wrap;
+
+    }
+.menubar{
+    display: none;
+}}
+  @media all and (min-width: 100px) and (max-width: 450px) {
+    .newres{
+display: none;
+        
+
+    
+
+ }
+ .menubar{
+    display: none;
+}
+   }
+   .respo{
+    display: flex;
+    flex-direction: row;
+   }

@@ -13,7 +13,7 @@ const SliderTwo = ({ data }) => {
  
 
   const sider = {
-    img: { width: '200%',height:'300px' },
+    img: { width: '100%',height:'300px' },
     
     para: {
       textAlign: 'center', fontSize: '14px', marginLeft: '40px', marginRight: '-70px'

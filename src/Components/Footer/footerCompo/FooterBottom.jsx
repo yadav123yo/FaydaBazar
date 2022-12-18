@@ -28,12 +28,12 @@ const FooterBottom = ({}) => {
         }
     ]
   return (
-    <Box backgroundColor={'#D9DDDC'}>
-    <Flex gap={'41px'}  justifyContent={'center'}   padding={'10px'} backgroundColor={'#D9DDDC'}>
+    <Box backgroundColor={'#D9DDDC'} className='respo' width={{base:'100%',sm:'100%',md:'118%' ,lg:'100%'}} >
+    <Flex gap={'41px'}  justifyContent={'center'}   padding={'10px'} backgroundColor={'#D9DDDC'} className=''>
 {shopbycategory.map((item)=>{
     return(
 
-        <Box>
+        <Box className='respo'>
     <Image
     borderRadius='full'
     boxSize='70px'

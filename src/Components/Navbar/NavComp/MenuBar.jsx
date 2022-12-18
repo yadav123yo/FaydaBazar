@@ -5,6 +5,7 @@ import { GrRefresh } from "react-icons/gr";
 import {
   Box,
   Flex,
+  Text,
   Avatar,
   HStack,
   IconButton,
@@ -55,24 +56,28 @@ const MenuBar = () => {
             <HStack
               as={'nav'}
               spacing={4}
-              display={{ base: 'none', md: 'flex' }}>
+              display={{ base: 'none', lg: 'flex' }}>
 Flex gap={'40px'}
             <Link to={`/product?category=`}>
-                 All
+                 
+                 <Text as='b'>All</Text>
               </Link>
            
             <Link to={`/product?category=Mens`}>
-                 Men Cloths
+                 <Text as='b'>Men Clothes</Text>
+
               </Link>
             <Link to={`/product?category=Womens`}>
-                 Women Cloths
+            <Text as='b'>Women Clothes</Text>
               </Link>
             <Link to={`/`}>
-            Departments
+            <Text as='b'>Departments</Text>
+
+            
               </Link>
             <Link to={`/`}>
-            Shop Buddy
-              </Link>
+            <Text as='b'>Shop Buddy</Text>
+            </Link>
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
@@ -105,7 +110,7 @@ Flex gap={'40px'}
             <Stack as={'nav'} spacing={4}>
             Flex gap={'40px'}
             <Link to={`/product?category=`}>
-                 All
+                 <Text as='b'>All</Text>
               </Link>
            
             <Link to={`/product?category=Mens`}>

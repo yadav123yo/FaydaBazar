@@ -20,14 +20,14 @@ const Home = () => {
     <HomeThird data={gifts}/>
 <Category shopbycategory={shopbycategory}/>
 <HomeFourth data={gifts2}/>
-<Slider1 data2={data2} img={'https://img.shop.com/Image/homepage/layered-usa-104750-holiday-collection-banner-bgsq1668531326212.jpg'}/>
+<Slider1 data2={data2} img={'https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/c/f/y/m-hm-sht5201-hanumntra-original-imaghfk9uxpusghn.jpeg?q=70'}/>
 <HomeFourth data={gifts3}/>
-<Slider1 data2={data3} img={'https://img.shop.com/Image/homepage/motives-usa-can-eng-105076-2022-holiday-banner-600x600-img-min1666019864593.jpg'}/>
+<Slider1 data2={data3} img={'https://rukminim1.flixcart.com/image/612/612/kjhgzgw0-0/lehenga-choli/l/j/j/free-sleeveless-zeqard-01-vajiba-original-imafzfezgegvuhvy.jpeg?q=70'}/>
 <HomeThird data={freeShipping2}/>
-<Slider2 data2={data4} img={'https://img.shop.com/Image/homepage/motives-usa-can-eng-105076-2022-holiday-banner-600x600-img-min1666019864593.jpg'}/>
+<Slider2 data2={data4} img={'https://rukminim1.flixcart.com/image/612/612/kfvfwy80/lehenga-choli/m/c/g/free-half-sleeve-p0001-zinariya-fab-original-imafw8h7hqmkdyyb.jpeg?q=70'}/>
 <Category shopbycategory={shopbycategory2}/>
 <HomeThird data={gifts4}/>
- <TopSellers data={data5}/> 
+ {/* <TopSellers data={data5}/>    */}
     </Box>
   )
 }

@@ -7,9 +7,9 @@ import { AiOutlineTwitter } from "react-icons/ai";
 const FootCont = () => {
   return (
     <div>
-        <Box className='footerbar' padding={'5px'}>
-        <Flex  justifyContent={"space-between"} margin='20px'>
-             <Flex gap={'00px'} backgroundColor='' justifyContent={'space-between'}>
+        <Box className='footerbar' padding={'5px'} width={{base:'130%',sm:'100%',md:'100%' ,lg:'100%'}}>
+        <Flex  justifyContent={"space-between"} margin='20px' className='newres'>
+             <Flex gap={'00px'} backgroundColor='' justifyContent={'space-between'} className='newres'>
             <Text fontSize={'xs'} color='white'>Get Email Deals & Earn Cashback</Text>
             <InputGroup>
             <Input type="text" placeholder="Enter Email Adress" padding={'15px'}/>
@@ -23,14 +23,14 @@ children={<Box></Box>}
            
 
             </Flex > 
-            <Flex gap={'40px'}>
+            <Flex gap={'40px'} className='newres'>
             <Box cursor={"pointer"} display="flex" color='white' >Link To This Page & Tell All Your Friends!</Box>
             <Button cursor={"pointer"} height={'30px'} borderRadius={'20px'}>copy link</Button>
 
             </Flex>
 
         </Flex>
-        <Box className='menubar'>
+        <Box className='menubar' >
         <Flex  justifyContent={"space-between"}>
              <Flex gap={'10px'}>
              <Text fontSize={'xs'} as='b'  color='white'> About Us |</Text>
