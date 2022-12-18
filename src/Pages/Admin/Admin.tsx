@@ -20,6 +20,8 @@ import {
   MenuItem,
   MenuList,
   Image,
+  Heading,
+  Button
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 // import Logo from "../Admin/";
@@ -166,7 +168,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
     
       
       </Text>
-
+      <Heading style={{margin:"auto"}}  >Welcome to Admin Pannel</Heading>
       <Link to="/" style={{ textDecoration: "none" }}>
         <Flex
           align="center"
@@ -183,6 +185,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
           Home
         </Flex>
       </Link>
+    
 
       <HStack spacing={{ base: "0", md: "6" }}>
         <IconButton
@@ -225,19 +228,21 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
               borderColor={useColorModeValue("gray.200", "gray.700")}
             >
               <MenuItem>
-                <Link to="/admin/addProduct" style={{ textDecoration: "none" }}>
+                <Link to="/admin/adminForm" style={{ textDecoration: "none" }}>
                   Add Product
                 </Link>
               </MenuItem>
               <MenuItem>
+             
                 <Link to="/admin/dashboard" style={{ textDecoration: "none" }}>
                   Dashboard
                 </Link>
+            
               </MenuItem>
 
               <MenuDivider />
               <MenuItem>
-                <Link to="/login" style={{ textDecoration: "none" }}>
+                <Link to="/" style={{ textDecoration: "none" }}>
                   Sign Out
                 </Link>
               </MenuItem>

@@ -1,32 +1,59 @@
-import React from 'react'
-
-import  { useState,useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
-
- 
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  FormControl,
+  FormLabel,
+  Input,
+  useDisclosure,
   Flex,
   Grid,
-
+  useToast,
 } from "@chakra-ui/react";
 import { Box, Image, Text, SimpleGrid, Button } from "@chakra-ui/react";
+import {
+  deleteProduct,
+  getAllProducts,
+  updateProduct,
+} from "../../Redux/products/action";
+import { useSelector, useDispatch } from "react-redux";
 
+function Dashboard() {
+  const [product, setProduct] = useState({});
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const initialRef = React.useRef(null);
+  const finalRef = React.useRef(null);
+  const { data } = useSelector((store) => store.products);
+  const toast = useToast();
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllProducts());
+  }, [dispatch]);
 
-
-
-function Dashboard(){
-  const [data,setData]= useState([]);
-
-    const getData=async()=>{
-      let dataa = await fetch("https://faydab.onrender.com/product");
-      let res = await dataa.json() ;
-      // console.log(res)
-      setData(res.products)
+  const handleformData = ({ target }) => {
+    let val = target.value;
+    if (target.name === "price") {
+      val = +target.value;
     }
-    useEffect(()=>{
-        getData()
-    },[])
-
-return (
+    setProduct({ ...product, [target.name]: val });
+  };
+  const handleSubmit = () => {
+    dispatch(updateProduct(product._id, product));
+    onClose();
+    toast({
+      title: "Product updated",
+      status: "info",
+      duration: 2000,
+      isClosable: true,
+      position: "top",
+    });
+  };
+  return (
     <Box>
       <SimpleGrid
         templateColumns={{
@@ -36,20 +63,21 @@ return (
         }}
         gap={4}
       >
-        {
-          data?.map((item, index) => (
+        {data &&
+          data.map((item, index) => (
             <Grid
               border="1px"
               borderColor="black"
+             
               alignItems={"center"}
               justifyContent={"center"}
               key={index}
             >
               <Box m={6}>
-                <div key={item.id} >
+                <div>
                   <Image
                     src={item.image}
-                    alt={`Picture of ${item.name}`}
+                    alt={`Picture of ${item.title}`}
                     roundedTop="lg"
                   />
                   <Text as="b" color="black">
@@ -62,14 +90,20 @@ return (
                   </Text>
                   <Text color="grey">Brand: {item.brand.slice(0, 10)}</Text>
                   <Text color="grey">Price: {item.offer_price}₹</Text>
-
                   <Flex>
                     <Button
                       marginTop={5}
                       colorScheme="red"
-                      variant="outline"
+                  
                       onClick={() => {
-                       
+                        dispatch(deleteProduct(item._id));
+                        toast({
+                          title: "Product Deleted",
+                          status: "info",
+                          duration: 2000,
+                          isClosable: true,
+                          position: "top",
+                        });
                       }}
                     >
                       Delete
@@ -77,24 +111,94 @@ return (
 
                     <Button
                       onClick={() => {
-                      
+                        onOpen();
+                        setProduct(item);
                       }}
                       marginTop={5}
                       marginLeft="5"
                       colorScheme="blue"
-                      variant="outline"
+                   
                     >
                       Update
                     </Button>
-                  </Flex>
-                  <Flex>
                   </Flex>
                 </div>
               </Box>
             </Grid>
           ))}
 
-     </SimpleGrid>
+        <Modal
+          initialFocusRef={initialRef}
+          finalFocusRef={finalRef}
+          isOpen={isOpen}
+          onClose={onClose}
+        >
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>Add A Product</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody pb={6}>
+              <FormControl>
+                <FormLabel> Image URL</FormLabel>
+                <Input
+                  onChange={handleformData}
+                  ref={initialRef}
+                  type="url"
+                  name="image"
+                  value={product.image}
+                />
+              </FormControl>
+              <FormControl>
+                <FormLabel> name</FormLabel>
+                <Input
+                  onChange={handleformData}
+                  ref={initialRef}
+                  placeholder="Product Name"
+                  name="title"
+                  value={product.title}
+                />
+              </FormControl>
+
+              <FormControl mt={4}>
+                <FormLabel>Category</FormLabel>
+                <Input
+                  onChange={handleformData}
+                  name="category"
+                  placeholder="like: Mackup,hair.."
+                  value={product.category}
+                />
+              </FormControl>
+
+              <FormControl mt={4}>
+                <FormLabel>Brand</FormLabel>
+                <Input
+                  onChange={handleformData}
+                  placeholder="Brand Name"
+                  name="brand"
+                  value={product.brand}
+                />
+              </FormControl>
+
+              <FormControl mt={4}>
+                <FormLabel>Price</FormLabel>
+                <Input
+                  onChange={handleformData}
+                  placeholder="In ₹ "
+                  value={product.offer_price}
+                  name="offer_price"
+                />
+              </FormControl>
+            </ModalBody>
+
+            <ModalFooter>
+              <Button colorScheme="blue" mr={3} onClick={handleSubmit}>
+                Save
+              </Button>
+              <Button onClick={onClose}>Cancel</Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+      </SimpleGrid>
     </Box>
   );
 }
