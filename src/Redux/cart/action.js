@@ -33,14 +33,14 @@ import {
     }
   };
   
-  export const addProductToCart = (id, value) => async (dispatch) => {
+  export const addProductToCart = (_id, value) => async (dispatch) => {
   
     try {
       dispatch({ type: ADD_TO_CART_REQUEST });
       const res = await fetch(`https://faydab.onrender.com/cart`, {
         method: "POST",
         body: JSON.stringify({
-          productId: id,
+          productId: _id,
           quantity: value,
         }),
         headers: {
