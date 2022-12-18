@@ -18,7 +18,7 @@ const AllProduct = () => {
   const [sort, setSort] = useState("offer_price");
   const [orderBy, setOrderBy] = useState("");
   const { data } = useSelector((store) => store.products);
-
+  // console.log(data)
   let length;
   if (query === "") {
     length = 190;
@@ -84,7 +84,7 @@ const AllProduct = () => {
           <Accordion allowToggle>
             <AccordionItem>
               <Select
-                placeholder="Price"
+                placeholder=" Sort By Price"
                 textAlign="center"
                 onChange={({ target }) => {
                   if (target.value === "increasing") {
@@ -116,28 +116,29 @@ const AllProduct = () => {
 
           data?.map((e,i) => (
              <div id='singleProduct' key={e._id}>
-              <img src={e.image} alt="" />
-              <Text fontSize='xl'>{e.title}</Text>
+              <Link to={`/product/${e._id}`}>
 
-                <div id="productPrice">
-                  <div id="productMrp">
-                    <Text fontSize="xs" as="s" color='tomato'>{e.original_price}{" "}</Text>
-                    <Text color="black" fontSize="s" as='b'>₹{" "} {e.offer_price}</Text>
-                    <Text color="black" fontSize="s" as='b'>₹{" "} {e.category}</Text>
-                    <Text color="black" fontSize="s" as='b'>ID{"-"} {e._id}</Text>
-                  </div>
-                </div>
-                
-                <Text color="teal" fontSize="xs">Free Shipping</Text>
+                  <img src={e.image} alt="" />
+                  <h1 style={{ maxWidth: "35ch", textOverflow: "ellipsis", overflow: "hidden", whiteSpace: "nowrap",fontSize: "large", fontWeight:"bolder" }} >{e.title}</h1>
 
-                <div id="productButton">
-                  <Button colorScheme="white" color="black" variant='outline' className="btn1">
-                  <Link to={`/product/${e._id}`}> SEE DETAILS</Link>
-                    </Button>
-                  <Spacer />
-                  <Button colorScheme="facebook" className="btn2">ADD TO CART</Button>
-                </div>
+                    <div id="productPrice">
+                      <div id="productMrp">
+                        <Text fontSize="xs" as="s" color='tomato'>{e.original_price}{" "}</Text>
+                        <Text color="black" fontSize="sm" as='b'>₹{" "} {e.offer_price}</Text>
+                        <Text color="black" fontSize="s">{" "} {e.category}</Text>
+                      </div>
+                    </div>
+                    
+                    <Text color="teal" fontSize="xs">Free Shipping</Text>
 
+                    <div id="productButton">
+                      <Button color="white"  variant='outline' className="btn1" width="100%">
+                      {/* <Link to={`/product/${e._id}`}> SEE DETAILS</Link> */}
+                      SEE DETAILS
+                        </Button>
+                    </div>
+
+              </Link>
             </div>
             ))
         }
@@ -147,11 +148,11 @@ const AllProduct = () => {
 
 
                     <Flex justifyContent="center" gap="30px" marginTop="30px">
-                    <Button disabled={page === 1} onClick={() => setPage(page - 1)}>
+                    <Button disabled={page === 1} onClick={() => setPage(page - 1)} bg="teal" color="white">
             Prev
           </Button>
           <Button>{page}</Button>
-          <Button
+          <Button bg="teal" color="white"
             disabled={page === Math.ceil(length / 20)}
             onClick={() => setPage(page + 1)}
           >
