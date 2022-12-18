@@ -32,7 +32,7 @@ const TopSellers = ({ data }) => {
 
 
         {data.map((image, index) => (
-                          <Link to={`/product`}>
+                          <Link to={`/product?category=`}>
 
           <SiderTwocard
             className="image"
