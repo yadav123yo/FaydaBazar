@@ -85,7 +85,7 @@ Flex gap={'40px'}
                  <Flex gap={'40px'} className='hide'            display={{ base: 'none', sm: 'inline-flex'  }}
  >
             <Box cursor={"pointer"} display="flex" > <HiUserCircle style={{color: 'black', border:'1px', fontSize: '30px'}}/> Sign in</Box>
-            <Box cursor={"pointer"} display="flex" > <HiShoppingCart style={{color: 'black', border:'1px', fontSize: '30px'}}/>Cart </Box>
+            <Box cursor={"pointer"} display="flex" > <HiShoppingCart style={{color: 'black', border:'1px', fontSize: '30px'}}/><Link to={`/cart`}>Cart </Link></Box>
             <Box cursor={"pointer"} display="flex" > <HiUserCircle style={{color: 'black', border:'1px', fontSize: '30px'}}/>Admin</Box>
 
             </Flex>

@@ -13,7 +13,7 @@ import Signup from '../Pages/Signup/Signup';
 import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer/Footer";
 import Admin from "../Pages/Admin/Admin"
-
+import PrivateRoute from './PrivateRoute';
 /*
 Dont make any changes to this file
 */
@@ -26,8 +26,8 @@ const AllRoutes = () => {
             <Route path="/signup" element={ <><Navbar /> <Signup />  <Footer /></>} />
             <Route path="/product" element={   <><Navbar /> <AllProduct />   <Footer /></>} />
             <Route path="/product/:id" element={<><Navbar /><SingleProduct /> <Footer /></>} />
-            <Route path="/cart" element={ <><Navbar /><Cart />     <Footer /></>} />
-            <Route path="/checkout" element={  <><Navbar /><Checkout />  <Footer /></>} />
+            <Route path="/cart"             element={<><Navbar /><PrivateRoute><Cart /></PrivateRoute>    <Footer /></>} />
+            <Route path="/checkout"         element={<><Navbar /><PrivateRoute><Checkout /> </PrivateRoute> <Footer /></>} />
             <Route path="/admin/dashboard" element={<Admin> <Dashboard /> </Admin> } />
             <Route path="/admin/adminForm" element={<Admin> <AdminForm /> </Admin>} />
           
