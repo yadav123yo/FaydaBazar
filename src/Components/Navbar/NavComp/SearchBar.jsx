@@ -4,7 +4,7 @@ import { SearchIcon } from '@chakra-ui/icons'
 
 const SearchBar = () => {
   return (
-    <Box>
+    <Box width={{base:'100%',sm:'100%',md:'100%' ,lg:'100%'}}>
         <InputGroup>
       <Input type='text' 
       backgroundColor='rgb(245,245,246)'
@@ -19,27 +19,29 @@ const SearchBar = () => {
         '555px', // 48em-62em
         '700px', // 62em+
       ]}
-      placeholder='Search SHOP.COM'
+      placeholder='Search From Here'
       height='40px'
       padding='20px'
+      marginTop="7px"
       />
 
-    <InputRightElement
+    {/* <InputRightElement
       pointerEvents='none'
       children={<SearchIcon
        backgroundColor={'black'} 
       h='40px' 
-      width={[
-        '40px', // 0-30em
-        '20px', // 30em-48em
-        '35px', // 48em-62em
-        '40px', // 62em+
-      ]}
+      // width={[
+      //   '40px', // 0-30em
+      //   '20px', // 30em-48em
+      //   '35px', // 48em-62em
+      //   '40px', // 62em+
+      // ]}
       borderRadius='0px 20px 20px 0px' 
       color={"#c3c5cc"}
       margin-bottom={'24px'}
-      />}
-    />
+      />} */}
+      
+    
   </InputGroup>
 
     </Box>

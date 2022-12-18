@@ -13,8 +13,8 @@ const SiderTwocard = ({ img,p, style, text, btn, styleBtn, stylePara1, para1, st
         <img src={img} alt="placeholder" style={style} />
         <Text style={stylePara1}>{p}</Text>
         <Text style={stylePara}>{text}</Text>
-        <Text as='b'>$ {(10+Math.random()*30).toFixed(2)}</Text>
-        <Text fontSize='xs' > +$ {(Math.random()*3).toFixed(2)} /2% <span style={{color:''}}>cashback</span></Text>
+        <Text as='b'>₹ {(10+Math.random()*3000).toFixed(2)}</Text>
+        <Text fontSize='xs' > +₹ {(Math.random()*3).toFixed(2)} /2% <span style={{color:''}}>cashback</span></Text>
         <Text style={{color:'blue'}}> free shipping with $99 order</Text>
 
       </Box>

@@ -2,16 +2,18 @@
     margin-top: 0px;
 }
 .navcontainer{
-    background-color: #D9DDDC	;
+    background-color: black;
     padding: 0px;
     /* position: sticky;
   position: -webkit-sticky;
   top: 0;
   z-index: 1000 */
+  width: 100%;
+  margin: auto;
 }
 .navmenu{
     margin-top: 10px;
-    padding: 20px;
+    /* padding: 20px; */
 }
 .navbarside{
   border: 1px solid red;
@@ -20,22 +22,25 @@
   display: none;
 }
 
-@media all and (min-width: 451px) and (max-width: 750px) {
-    
+ @media all and (min-width: 451px) and (max-width: 750px) {
+  .navcontainer{
+    width: 100%;
+    margin: auto;
+
+ }
      }
      @media all and (min-width: 751px) and (max-width: 1024px) {
-      .doctors,.doctors2{
-         grid-template-columns:repeat(2,1fr);
-         grid-template-rows: repeat(2,auto);
-         width: max-content;
+      .navcontainer{
+         width: 92%;
+         margin: auto;
       }
        }
      /* Small screens */
      @media all and (min-width: 100px) and (max-width: 450px) {
-       .doctors,.doctors2{
-       grid-template-columns:repeat(1,1fr);
-       grid-template-rows: repeat(1,auto);
-       width: 5000px;
+       .navcontainer{
+       width: 190%;
+border: 1px solid red;
+margin: auto;
     }
 
      }
@@ -47,23 +52,22 @@
      }
      @media all and (min-width: 751px) and (max-width: 1024px) {
       .hide{
-background-color: blue;
 display: none;
 
       }
        }
        
      /* Small screens */
-     @media all and (min-width: 451px) and (max-width: 750px) {
+     /* @media all and (min-width: 451px) and (max-width: 750px) {
        .hide{
        display: none;
     }}
     @media all and (min-width: 100px) and (max-width: 450px) {
-      .hide{
+      .navcontainer{
       display: none;
       background-color: pink;
       
 
    }
      }
-
+  */ 

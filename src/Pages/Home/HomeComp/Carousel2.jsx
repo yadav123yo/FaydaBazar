@@ -94,8 +94,8 @@ const Carousel2 = (props) => {
     }
 
     return (
-        <div className="carousel-container2">
-            <div className="carousel-wrapper">
+        <div className="carousel-container2" width={['200%','100%','100%' ]}  display={{ base: 'none', md: 'flex' }}>
+            <div className="carousel-wrapper" width={['200%','100%','100%' ]}>
                 {/* You can alwas change the content of the button to other things */}
                 {
                     (isRepeating || currentIndex > 0) &&

@@ -64,7 +64,7 @@
      /* Small screens */
      @media all and (min-width: 100px) and (max-width: 450px) {
        .doctors,.doctors2{
-       grid-template-columns:repeat(1,1fr);
+       grid-template-columns:repeat(2,1fr);
        grid-template-rows: repeat(1,auto);
        width: 400px;
        align-items: center;
@@ -82,7 +82,8 @@
       grid-template-rows: repeat(1, auto);
       width: 80%;
       margin: auto;
-    
+      border: red;
+
     }
     
        @media all and (min-width: 451px) and (max-width: 750px) {
@@ -90,6 +91,8 @@
            grid-template-columns:repeat(3,1fr);
            grid-template-rows: repeat(3,600px);
            height: 600px;
+           margin: auto;
+           border: red;
         }
          }
          @media all and (min-width: 751px) and (max-width: 1024px) {
@@ -97,18 +100,22 @@
              grid-template-columns:repeat(3,1fr);
              grid-template-rows: repeat(2,auto);
              width: 660px;
+             margin: auto;
+
           }
            }
          /* Small screens */
          @media all and (min-width: 100px) and (max-width: 450px) {
-           .doctors3{
-           grid-template-columns:repeat(1,1fr);
+           .doctors3,.season{
+           grid-template-columns:repeat(3,1fr);
            grid-template-rows: repeat(1,auto);
+           width: auto;
+           margin: auto;
+
         }
     
          }
 .topsell{
-  border: 1px solid red;
 }
 
 @media all and (min-width: 451px) and (max-width: 750px) {
@@ -116,6 +123,7 @@
      grid-template-columns:repeat(3,1fr);
      grid-template-rows: repeat(3,600px);
      height: 600px;
+     border: 1px solid red;
   }
    }
    @media all and (min-width: 751px) and (max-width: 1024px) {
@@ -123,6 +131,8 @@
        grid-template-columns:repeat(3,1fr);
        grid-template-rows: repeat(2,auto);
        width: max-content;
+       border: 1px solid red;
+
     }
      }
    /* Small screens */
@@ -173,17 +183,13 @@
   justify-content: space-around;
   margin: 0px;
 
-background-color: red;
 }
-.Sliderone{
-    background-color: aqua;
-}
+
 
 .carousel-container {
   width: 850px; 
   display: flex;
   flex-direction: column;
-  background-color: blue;
   justify-content: space-around;
   /* margin-top: -60px; */
 }
@@ -192,7 +198,6 @@ background-color: red;
   width: 1340px; 
   display: grid;
   flex-direction: column;
-  background-color: blue;
   justify-content: space-around;
   /* margin-top: -60px; */
   grid-template-columns:repeat(3,1fr);
@@ -204,30 +209,35 @@ background-color: red;
   .carousel-container2,.carousel-container{
      grid-template-columns:repeat(3,1fr);
      grid-template-rows: repeat(3,600px);
-     width: 940px; 
+     width: auto; 
 overflow: hidden;
 display: none;
   }
    }
 
    @media all and (min-width: 751px) and (max-width: 1024px) {
+    
     .carousel-container2.carousel-container{
-       grid-template-columns:repeat(3,1fr);
-       grid-template-rows: repeat(2,auto);
-       width: 700px;
-       overflow: hidden;
-display: none;
+      overflow: hidden;
+width: 10%;
+    }.carousel-wrapper{
+      display: none;
+    }
+    .card{
+display: flex;  }
+    .left-arrow.right-arrow{
+      display: inline-block;
     }
      }
    /* Small screens */
    @media all and (min-width: 100px) and (max-width: 450px) {
      .carousel-container2.carousel-container{
-     grid-template-columns:repeat(1,1fr);
-     grid-template-rows: repeat(1,auto);
-     width: 500px;
+     display: none;
      overflow: hidden;
   }
-
+  .carousel-wrapper{
+    display: none;
+  }
    }
 
 
@@ -237,7 +247,7 @@ display: none;
 
 
 .carousel-container>div>div {
-   background-color: green; 
+   
   height: 440px;
 
 }
@@ -306,6 +316,9 @@ display: none;
 @media (hover:-webkit-scrollbar) and (pointer: coarse) {
   .left-arrow, .right-arrow {
       display: none;
+  }
+  .carousel-wrapper{
+    display: none;
   }
 }
 .imh{
