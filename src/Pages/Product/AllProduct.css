@@ -1,6 +1,8 @@
-.so1 button{
-    gap: 10px;
-    border: 1px solid red;
+.so3 {
+    background-color: rgb(0, 154, 154);
+    color: black;
+    font-weight: bolder;
+    font-size: large;
 }
 
 #mainDiv{
@@ -17,13 +19,11 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 30px;
-    border: 1px solid red;
     width: 80%;
     margin: auto;
 }
 
 #singleProduct{
-    border: 1px solid green;
     padding: 5px;
     height: 500px;
     border-radius: 10px;
@@ -34,7 +34,6 @@
 
 #singleProduct img{
 width: 100%;
-border: 1px solid red;
 height: 70%;
 border-radius: 10px;
 }
@@ -47,11 +46,16 @@ border-radius: 10px;
 
 #productButton{
     width: 100%;
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
+.btn1{
+    background-color: teal;
+    color: white;
+    border-radius: 20px;
+}
 
 /* Medium Screen */
 @media  (min-width:600px) and (max-width: 1500px)  {
@@ -59,7 +63,6 @@ border-radius: 10px;
         display: grid;
         grid-template-columns: repeat(2,1fr);
         gap: 20px;
-        border: 1px solid red;
         width: 70%;
         margin: auto;
     }
@@ -73,11 +76,10 @@ border-radius: 10px;
         display: grid;
         grid-template-columns: repeat(1,1fr);
         gap: 20px;
-        border: 1px solid red;
         width: 70%;
         margin: auto;
     }
     .sibox{
-        display:hide;
+        display:none;
     }
   }
