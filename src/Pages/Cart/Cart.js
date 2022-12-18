@@ -1,63 +1,119 @@
-import { Box, Button, Flex, Spacer, Text } from "@chakra-ui/react";
-import React from "react";
-import "./Cart.css"
+//  import { Box, Flex, Heading, useToast } from "@chakra-ui/react";
+// import "./Cart.css";
+// import Left from "./l/Left";
+// import Right from "./R/Right";
+// import { useSelector } from "react-redux";
+// import { Navigate } from "react-router-dom";
 
-const Cart = () => {
-  return <div id="cartPage">
-   <Text fontSize='3xl' as='b'>Your Cart</Text>
+// function Cart() {
+//   const auth = useSelector((store) => store.auth);
+//   const toast = useToast();
+//   // console.log(auth);
+//   if (auth.data.isAuthenticated === false) {
+//     toast({
+//       title: "Login Error",
+//       description: "Please login first to access cart",
+//       status: "error",
+//       duration: 3000,
+//       isClosable: true,
+//       position: "top",
+//     });
+//     toast({
+//       title: "Redirecting",
+//       description: "Redirecting to signup page",
+//       status: "error",
+//       duration: 3000,
+//       isClosable: true,
+//       position: "top",
+//     });
+//     return <Navigate to="/signup" />;
+//   }
 
-   <div id="mainCartDiv">
-    <div id="CartProductDiv">
-      <Text fontSize='2xl' as='b'>Shipment from KixRx</Text>
-      <hr />
-      <div id="upperDiv">
-        <Text>Congratulations! Your order qualifies for free shipping from KixRx. </Text>
-        <button>Learn More</button>
-      </div>
+//   return (
+//     <Box
+//       w={{ lg: "90%", md: "100%", base: "100%" }}
+//       h="auto"
+//       m="auto"
+//       mt="20px"
+//       mb="20px"
+//       p="10px"
+//     >
+//       <Heading
+//         fontSize={{ lg: "25px", md: "20px", base: "25px" }}
+//         pb={{ lg: "20px", md: "20px", base: "10px" }}
+//       >
+//         My Basket
+//       </Heading>
+//       <Flex
+//         gap={{ lg: "15px", md: "15px" }}
+//         h="auto"
+//         flexDirection={{ lg: "row", md: "row", base: "column-reverse" }}
+//       >
+//         <Left />
+//         <Right />
+//       </Flex>
+//     </Box>
+//   );
+// }
 
-      <div id="productDiv">
-        <div id="leftDiv">
-          <img src="https://img.shop.com/Image/280000/282100/282141/products/1911627003__100x100__.jpg" alt="Product_Image" />
-        </div>
-        <div id="rightDiv">
-          <Text fontSize='l' as='b'>Nike Air Force 1 '07 White CW2288-111 Men's</Text>
-          <Text fontSize='xl' >$ 143</Text>
-        </div>
-        <Spacer />
+// export default Cart;
 
-        <Button colorScheme='teal' size='md'>Remove</Button>
-      </div>
-      <hr />
-      <Flex>
-        <Box p='4'>
-          Store Total:-
-        </Box>
-        <Spacer />
-        <Box p='4'>
-         $ 143
-        </Box>
+import { Box, Flex, Heading, useToast } from "@chakra-ui/react";
+import "./Cart.css";
+import Left from "../../Components/Cart/left/Left";
+import Right from "../../Components/Cart/right/Right";
+import { useSelector } from "react-redux";
+import { Navigate } from "react-router-dom";
+
+function Cart() {
+  const auth = useSelector((store) => store.auth);
+  const toast = useToast();
+  // console.log(auth);
+  if (auth.data.isAuthenticated === false) {
+    toast({
+      title: "Login Error",
+      description: "Please login first to access cart",
+      status: "error",
+      duration: 3000,
+      isClosable: true,
+      position: "top",
+    });
+    toast({
+      title: "Redirecting",
+      description: "Redirecting to signup page",
+      status: "error",
+      duration: 3000,
+      isClosable: true,
+      position: "top",
+    });
+    return <Navigate to="/signup" />;
+  }
+
+  return (
+    <Box
+      w={{ lg: "90%", md: "100%", base: "100%" }}
+      h="auto"
+      m="auto"
+      mt="20px"
+      mb="20px"
+      p="10px"
+    >
+      <Heading
+        fontSize={{ lg: "25px", md: "20px", base: "25px" }}
+        pb={{ lg: "20px", md: "20px", base: "10px" }}
+      >
+        My Basket
+      </Heading>
+      <Flex
+        gap={{ lg: "15px", md: "15px" }}
+        h="auto"
+        flexDirection={{ lg: "row", md: "row", base: "column-reverse" }}
+      >
+        <Left />
+        <Right />
       </Flex>
-    </div>
-
-    {/* cart total div on left side */}
-    <div id="CartTotalDiv">
-      <Text fontSize='2xl' as='b'>Order Total</Text>
-      <hr />
-      <Flex>
-        <Box p='4'>
-          Subtotal:-
-        </Box>
-        <Spacer />
-        <Box p='4'>
-         $ 143
-        </Box>
-      </Flex>
-        <div id="checkOutDiv">
-          <Button colorScheme="facebook">Proceed to Checkout</Button>
-        </div>
-    </div>
-   </div>
-    </div>;
-};
+    </Box>
+  );
+}
 
 export default Cart;
