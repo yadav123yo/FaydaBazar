@@ -8,7 +8,7 @@ const HomeThird = ({data}) => {
 
     {data.map((item)=>{
         return(
-          <Link to={`/product`}>
+          <Link to={`/product?category=`}>
 
     <Box  backgroundColor={''} alignItem='center' padding={'0px'} width={'330px'} height={'auto'} 
     

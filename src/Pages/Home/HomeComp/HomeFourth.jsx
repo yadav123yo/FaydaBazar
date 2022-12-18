@@ -8,7 +8,7 @@ const HomeFourth = ({data}) => {
       <Box className='doctors2'>
     {data.map((item)=>{
         return(
-          <Link to={`/product`}>
+          <Link to={`/product?category=`}>
 
     <Box  backgroundColor={''} alignItem='center' padding={'15px'} width={'330px'} height={'auto'} > 
     <Box boxShadow= {'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'}>           <Image src={item.img}/></Box>

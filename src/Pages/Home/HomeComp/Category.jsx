@@ -8,7 +8,7 @@ const Category = ({shopbycategory}) => {
     <Box className='doctors3' backgroundColor={''}  padding={'10px'} width={['200%','100%','100%' ]}>
 {shopbycategory.map((item)=>{
     return(
-      <Link to={`/product`}>
+      <Link to={`/product?category=`}>
 
         <Box >
     <Image

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate ,Link} from 'react-router-dom'
 import { Button, Text,Box } from '@chakra-ui/react'
 
 const SiderTwocard = ({ img,p, style, text, btn, styleBtn, stylePara1, para1, stylePara,id }) => {
@@ -8,6 +8,8 @@ const SiderTwocard = ({ img,p, style, text, btn, styleBtn, stylePara1, para1, st
   const nv = useNavigate();
 
   return (
+    <Link to={`/product?category=`}>
+
     <Box className='card'>
       <Box style={{ padding: 8, }}>
         <img src={img} alt="placeholder" style={style} />
@@ -18,7 +20,9 @@ const SiderTwocard = ({ img,p, style, text, btn, styleBtn, stylePara1, para1, st
         <Text style={{color:'blue'}}> free shipping with $99 order</Text>
 
       </Box>
-    </Box>)
+    </Box>
+    </Link>
+)
 }
 
 export default SiderTwocard
