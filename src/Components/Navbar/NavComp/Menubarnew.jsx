@@ -2,6 +2,8 @@ import React from 'react'
 import { ReactNode } from 'react';
 import { HiUserCircle,HiShoppingCart } from "react-icons/hi";
 import { GrRefresh } from "react-icons/gr";
+import { AUTH_LOGOUT } from "../../../Redux/auth/actionTypes";
+
 import {
   Box,
   Flex,
@@ -18,7 +20,18 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack,
+    Popover,
+    PopoverArrow,
+    PopoverBody,
+    PopoverCloseButton,
+    PopoverContent,
+    PopoverTrigger,
+    Portal,
+    useToast,
+
 } from '@chakra-ui/react';
+import { useDispatch, useSelector } from "react-redux";
+import { AiOutlineUser } from "react-icons/ai";
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
 const Links = ['Dashboard', 'Projects', 'Team'];
@@ -39,7 +52,9 @@ const NavLink = ({ children }) => (
 
 const Menubarnew = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-
+  const dispatch = useDispatch();
+  const toast = useToast();
+  const auth = useSelector((state) => state.auth);
   return (
     <div>
         <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
@@ -85,7 +100,54 @@ Flex gap={'40px'}
                 
                  <Flex gap={'40px'} className='hide'            display={{ base: 'none', sm: 'inline-flex'  }}
  >
-            <Box cursor={"pointer"} display="flex" > <HiUserCircle style={{color: 'black', border:'1px', fontSize: '30px'}}/> Sign in</Box>
+            <Box cursor={"pointer"} display="flex" >  <p>
+                <Link to="/signup">
+                  <AiOutlineUser fontSize="20px" />
+                </Link>
+                {auth.data.isAuthenticated ? (
+                  <Button
+                    h="30px"
+                    w="60px"
+                    className="navLogout"
+                    onClick={() => {
+                      dispatch({ type: AUTH_LOGOUT });
+                      toast({
+                        title: "Logged out successfully",
+                        status: "success",
+                        duration: 3000,
+                        isClosable: true,
+                        position: "top",
+                      });
+                    }}
+                  >
+                    Logout
+                  </Button>
+                ) : (
+                  <span className="navLogin">
+                    <Popover>
+                      <PopoverTrigger>
+                        <Button>Get Started</Button>
+                      </PopoverTrigger>
+                      <Portal className="xxx">
+                        <PopoverContent>
+                          <PopoverArrow />
+                          <PopoverCloseButton />
+                          <PopoverBody>
+                            <Link to="/login" className="xxx">
+                              <Button colorScheme="blue">Login</Button>
+                            </Link>
+                            <br></br>
+                            <br></br>
+                            <Link to="/signup">
+                              <Button colorScheme="blue">Sign Up</Button>
+                            </Link>
+                          </PopoverBody>
+                        </PopoverContent>
+                      </Portal>
+                    </Popover>
+                  </span>
+                )}
+              </p></Box>
             <Box cursor={"pointer"} display="flex" > <GrRefresh style={{color: 'black', border:'1px', fontSize: '30px'}}/>Orders </Box>
             <Box cursor={"pointer"} display="flex" > <HiShoppingCart style={{color: 'black', border:'1px', fontSize: '30px'}}/>Cart </Box>
 
@@ -122,8 +184,56 @@ Flex gap={'40px'}
             Shop Buddy
               </Link>
               <Flex gap={'40px'} flexDirection={'column'}>
-            <Box cursor={"pointer"} display="flex" > <HiUserCircle style={{color: 'black', border:'1px', fontSize: '30px'}}/> Sign in</Box>
-            <Box cursor={"pointer"} display="flex" > <GrRefresh style={{color: 'black', border:'1px', fontSize: '30px'}}/>Orders </Box>
+            {/* <Box cursor={"pointer"} display="flex" > <HiUserCircle style={{color: 'black', border:'1px', fontSize: '30px'}}/> Sign in</Box> */}
+            <Box cursor={"pointer"} display="flex" >  <p>
+                <Link to="/signup">
+                  <AiOutlineUser fontSize="20px" />
+                </Link>
+                {auth.data.isAuthenticated ? (
+                  <Button
+                    h="30px"
+                    w="60px"
+                    className="navLogout"
+                    onClick={() => {
+                      dispatch({ type: AUTH_LOGOUT });
+                      toast({
+                        title: "Logged out successfully",
+                        status: "success",
+                        duration: 3000,
+                        isClosable: true,
+                        position: "top",
+                      });
+                    }}
+                  >
+                    Logout
+                  </Button>
+                ) : (
+                  <span className="navLogin">
+                    <Popover>
+                      <PopoverTrigger>
+                        <Button>Get Started</Button>
+                      </PopoverTrigger>
+                      <Portal className="xxx">
+                        <PopoverContent>
+                          <PopoverArrow />
+                          <PopoverCloseButton />
+                          <PopoverBody>
+                            <Link to="/login" className="xxx">
+                              <Button colorScheme="blue">Login</Button>
+                            </Link>
+                            <br></br>
+                            <br></br>
+                            <Link to="/signup">
+                              <Button colorScheme="blue">Sign Up</Button>
+                            </Link>
+                          </PopoverBody>
+                        </PopoverContent>
+                      </Portal>
+                    </Popover>
+                  </span>
+                )}
+              </p></Box>
+            {/* <Box cursor={"pointer"} display="flex" > <GrRefresh style={{color: 'black', border:'1px', fontSize: '30px'}}/>Orders </Box> */}
             <Box cursor={"pointer"} display="flex" > <HiShoppingCart style={{color: 'black', border:'1px', fontSize: '30px'}}/>Cart </Box>
 
             </Flex>
