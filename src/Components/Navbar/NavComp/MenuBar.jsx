@@ -91,7 +91,7 @@ Flex gap={'40px'}
  >
             <Box cursor={"pointer"} display="flex" > <HiUserCircle style={{color: 'black', border:'1px', fontSize: '30px'}}/> Sign in</Box>
             <Box cursor={"pointer"} display="flex" > <HiShoppingCart style={{color: 'black', border:'1px', fontSize: '30px'}}/><Link to={`/cart`}>Cart </Link></Box>
-            <Box cursor={"pointer"} display="flex" > <HiUserCircle style={{color: 'black', border:'1px', fontSize: '30px'}}/>Admin</Box>
+            <Box cursor={"pointer"} display="flex" > <HiUserCircle style={{color: 'black', border:'1px', fontSize: '30px'}}/><Link to="/admin/dashboard" >Admin</Link></Box>
 
             </Flex>
               </MenuItem>
