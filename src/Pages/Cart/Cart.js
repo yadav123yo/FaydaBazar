@@ -74,7 +74,7 @@ const data=[
     "title": "Striped Slim Fit Shirt",
     "price": null,
     "original_price": "₹2,499",
-    "offer_price": 97,
+    "offer_price": 77,
     "type": "shirt",
     "discount": "(21%)",
     "image": "https://assets.ajio.com/medias/sys_master/root/20210403/AcbB/6068b6caf997dd7b64643def/dennislingo_premium_attire_green_striped_slim_fit_shirt.jpg"
@@ -83,13 +83,13 @@ const data=[
     "id": 4,
     "category": "Women",
     "brand": "The Indian Garage Co",
-    "title": "AVAASA MIX N' MATCH",
+    "title": "Dupatta with Tassels",
     "price": null,
     "original_price": "₹1,749",
     "offer_price": 90,
     "type": "shirt",
     "discount": "(72% off)",
-    "image": "https://assets.ajio.com/medias/sys_master/root/20220207/qeFb/62014149f997dd03e2c420b2/avaasa_mix_n%27_match_navy_blue_dupatta_with_tassels.jpg"
+    "image":"https://assets.ajio.com/medias/sys_master/root/20220207/qeFb/62014149f997dd03e2c420b2/avaasa_mix_n%27_match_navy_blue_dupatta_with_tassels.jpg"
   },
   {
     "id": 5,
@@ -107,13 +107,13 @@ const data=[
     "id": 24,
     "category": "Womens",
     "brand": "MANKSH",
-    "title": "Floral Print Flared Kurta",
+    "title": "Langings with Drawstring Waist",
     "price": "₹750",
     "original_price": "₹1,499",
-    "offer_price": 450,
-    "type": "kurta",
+    "offer_price": 150,
+    "type": "pants",
     "discount": "(50% off)",
-    "image": "https://assets.ajio.com/medias/sys_master/root/20210611/ogdq/60c27b70f997ddb312c5ad19/manksh_green_floral_print_flared_kurta.jpg"
+    "image": "https://assets.ajio.com/medias/sys_master/root/20220603/M3nx/629a416ef997dd03e262a231/srishti_green_leggings_with_drawstring_waist.jpg"
   }
 ]
 
